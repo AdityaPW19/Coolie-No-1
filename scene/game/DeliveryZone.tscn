@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8vsa8a13hxpx"]
+
+[ext_resource type="Script" uid="uid://debvqqc8iw1hj" path="res://scene/game/DeliveryZone.gd" id="1_nkip3"]
+[ext_resource type="Texture2D" uid="uid://bk7j860m7tkfj" path="res://assets/platform assets/station master.png" id="2_7snjc"]
+[ext_resource type="Texture2D" uid="uid://b8m2fwml5fcaq" path="res://assets/platform assets/luggage2.png" id="3_5vgmc"]
+[ext_resource type="Texture2D" uid="uid://bavq7vkgbshr1" path="res://assets/platform assets/banda.png" id="4_0o8p5"]
+[ext_resource type="Texture2D" uid="uid://baqpc6ta2vdbn" path="res://assets/graphics/dialogue box.png" id="5_wmijx"]
+[ext_resource type="FontFile" uid="uid://ckln5pfhiy3bx" path="res://assets/fonts/Raventure.otf" id="6_1wrnw"]
+[ext_resource type="Texture2D" uid="uid://m4vsvw7krfqs" path="res://assets/graphics/red-neon-arrow-2.png" id="7_1wrnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ep7w"]
+size = Vector2(10.61, 13.8083)
+
+[node name="DeliveryZone" type="Area2D"]
+position = Vector2(0, 27)
+scale = Vector2(0.04, -0.04)
+collision_mask = 4
+script = ExtResource("1_nkip3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(16.64, 16.6)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1069, 1060)
+scale = Vector2(200.431, 154.4)
+shape = SubResource("RectangleShape2D_1ep7w")
+debug_color = Color(0.953435, 0.201738, 0.208391, 0.42)
+
+[node name="StationMaster" type="Sprite2D" parent="."]
+position = Vector2(700, 638.844)
+scale = Vector2(-8.09168, -8.09168)
+texture = ExtResource("2_7snjc")
+
+[node name="Luggage2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-325, 200)
+scale = Vector2(-9.51, -9.51)
+texture = ExtResource("3_5vgmc")
+
+[node name="Banda" type="Sprite2D" parent="."]
+position = Vector2(1875, 513.844)
+scale = Vector2(7.78959, 7.78959)
+texture = ExtResource("4_0o8p5")
+flip_v = true
+
+[node name="DialogueBubble" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-100, 2125)
+scale = Vector2(4.43862, 4.43862)
+texture = ExtResource("5_wmijx")
+flip_v = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBubble"]
+anchors_preset = -1
+anchor_right = 0.021
+offset_left = -185.663
+offset_top = 69.6236
+offset_right = 166.612
+offset_bottom = 195.624
+scale = Vector2(1.00143, -0.995533)
+theme_override_colors/default_color = Color(1, 1, 0.0235294, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/normal_font = ExtResource("6_1wrnw")
+theme_override_font_sizes/normal_font_size = 43
+text = "Good Job"
+tab_size = 7
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arrow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.368627, 1)
+position = Vector2(800, 3075)
+rotation = -1.60094
+scale = Vector2(1.41458, 1.41458)
+texture = ExtResource("7_1wrnw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Arrow"]
+anchors_preset = -1
+anchor_right = 0.021
+offset_left = -255.388
+offset_top = -325.96
+offset_right = 96.8867
+offset_bottom = -199.96
+rotation = 1.63615
+scale = Vector2(4.69669, -4.66905)
+theme_override_colors/default_color = Color(1, 1, 0.0235294, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/normal_font = ExtResource("6_1wrnw")
+theme_override_font_sizes/normal_font_size = 43
+text = "Deliver
+Here"
+tab_size = 7
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="ready" from="." to="." method="_on_ready"]

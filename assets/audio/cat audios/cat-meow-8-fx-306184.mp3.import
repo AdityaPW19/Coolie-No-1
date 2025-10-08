@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clgbr8im5pqmf"
+path="res://.godot/imported/cat-meow-8-fx-306184.mp3-db6cd1ab8d01de6968ff16a3cbd4149f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/cat audios/cat-meow-8-fx-306184.mp3"
+dest_files=["res://.godot/imported/cat-meow-8-fx-306184.mp3-db6cd1ab8d01de6968ff16a3cbd4149f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

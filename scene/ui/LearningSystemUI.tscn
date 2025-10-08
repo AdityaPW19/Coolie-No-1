@@ -1,0 +1,637 @@
+[gd_scene load_steps=14 format=3 uid="uid://cxscmagnmotk1"]
+
+[ext_resource type="Texture2D" uid="uid://rslmabxtdpip" path="res://assets/ui_assets/101-512.png" id="1_iwsg3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4ctm"]
+bg_color = Color(0.1, 0.15, 0.3, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4, 0.7, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65tfq"]
+bg_color = Color(0.15, 0.2, 0.15, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.8, 0.4, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cww0g"]
+bg_color = Color(0.2, 0.1, 0.2, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.4, 0.8, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wkvo"]
+bg_color = Color(0.2, 0.6, 0.2, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9, 0.9, 0.2, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or0so"]
+bg_color = Color(1, 1, 1, 0.1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh63o"]
+bg_color = Color(0.3, 0.3, 0.3, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6iyo6"]
+bg_color = Color(0.3, 0.3, 0.3, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8hk0"]
+bg_color = Color(0.3, 0.3, 0.3, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_in336"]
+bg_color = Color(0.3, 0.3, 0.3, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0b202"]
+bg_color = Color(0.3, 0.3, 0.3, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3t1jq"]
+bg_color = Color(0.3, 0.3, 0.3, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnqjb"]
+bg_color = Color(0.4, 0.2, 0.6, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.6, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="LearningSystemUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LearningPopup" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 635.0
+offset_top = 315.0
+offset_right = 1285.0
+offset_bottom = 765.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y4ctm")
+
+[node name="ContentContainer" type="VBoxContainer" parent="LearningPopup"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 620.0
+offset_bottom = 430.0
+
+[node name="HeaderSection" type="Control" parent="LearningPopup/ContentContainer"]
+custom_minimum_size = Vector2(590, 70)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="LearningPopup/ContentContainer/HeaderSection"]
+layout_mode = 0
+offset_right = 590.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.9, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "🪢 Fantastic! You Applied Pull Force!"
+horizontal_alignment = 1
+
+[node name="ExplanationSection" type="Control" parent="LearningPopup/ContentContainer"]
+custom_minimum_size = Vector2(590, 130)
+layout_mode = 2
+
+[node name="Explanation" type="Label" parent="LearningPopup/ContentContainer/ExplanationSection"]
+layout_mode = 0
+offset_right = 590.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 15
+text = "Perfect! Pull forces work just like push forces, but in the opposite direction. Same physics, different direction!"
+autowrap_mode = 3
+
+[node name="RealWorldSection" type="Control" parent="LearningPopup/ContentContainer"]
+custom_minimum_size = Vector2(590, 90)
+layout_mode = 2
+
+[node name="RealWorld" type="Label" parent="LearningPopup/ContentContainer/RealWorldSection"]
+layout_mode = 0
+offset_right = 590.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.7, 0.9, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "🌍 Real World: Like pulling a rope, opening a drawer, or dragging a heavy box - you're bringing things closer to you."
+autowrap_mode = 3
+
+[node name="ObjectiveSection" type="Control" parent="LearningPopup/ContentContainer"]
+custom_minimum_size = Vector2(590, 70)
+layout_mode = 2
+
+[node name="Objective" type="Label" parent="LearningPopup/ContentContainer/ObjectiveSection"]
+layout_mode = 0
+offset_right = 590.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 0.9, 0.4, 1)
+theme_override_font_sizes/font_size = 14
+text = "🎯 Try pulling a few more times to master this concept!"
+autowrap_mode = 3
+
+[node name="ButtonSection" type="HBoxContainer" parent="LearningPopup/ContentContainer"]
+custom_minimum_size = Vector2(590, 50)
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="LearningPopup/ContentContainer/ButtonSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DemoButton" type="Button" parent="LearningPopup/ContentContainer/ButtonSection"]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Show Demo 🔬"
+
+[node name="SmallSpacer" type="Control" parent="LearningPopup/ContentContainer/ButtonSection"]
+custom_minimum_size = Vector2(20, 35)
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="LearningPopup/ContentContainer/ButtonSection"]
+custom_minimum_size = Vector2(140, 35)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Got It! 🎯"
+
+[node name="PhysicsDemo" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1520.0
+offset_top = 174.0
+offset_right = 1900.0
+offset_bottom = 394.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_65tfq")
+
+[node name="DemoContainer" type="VBoxContainer" parent="PhysicsDemo"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 360.0
+offset_bottom = 205.0
+
+[node name="HeaderSection" type="Control" parent="PhysicsDemo/DemoContainer"]
+custom_minimum_size = Vector2(340, 35)
+layout_mode = 2
+
+[node name="DemoTitle" type="Label" parent="PhysicsDemo/DemoContainer/HeaderSection"]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.4, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 16
+text = "🔬 🚀 Push Force Physics"
+horizontal_alignment = 1
+
+[node name="ContentSection" type="Control" parent="PhysicsDemo/DemoContainer"]
+custom_minimum_size = Vector2(340, 140)
+layout_mode = 2
+
+[node name="DemoContent" type="Label" parent="PhysicsDemo/DemoContainer/ContentSection"]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "📊 F = ma (Force = Mass × Acceleration)
+
+Watch how the trolley moves away when you push it! The stronger you push, the faster it accelerates!"
+autowrap_mode = 3
+
+[node name="ButtonSection" type="HBoxContainer" parent="PhysicsDemo/DemoContainer"]
+custom_minimum_size = Vector2(380.2, 47.81)
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="PhysicsDemo/DemoContainer/ButtonSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseDemo" type="Button" parent="PhysicsDemo/DemoContainer/ButtonSection"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+icon = ExtResource("1_iwsg3")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ConceptTracker" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 658.0
+offset_right = 320.0
+offset_bottom = 858.0
+scale = Vector2(0.75527, 0.75527)
+theme_override_styles/panel = SubResource("StyleBoxFlat_cww0g")
+
+[node name="TrackerContainer" type="VBoxContainer" parent="ConceptTracker"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 285.0
+offset_bottom = 190.0
+
+[node name="HeaderSection" type="Control" parent="ConceptTracker/TrackerContainer"]
+custom_minimum_size = Vector2(270, 35)
+layout_mode = 2
+
+[node name="TrackerTitle" type="Label" parent="ConceptTracker/TrackerContainer/HeaderSection"]
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.9, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "📚 Physics Learning Progress"
+horizontal_alignment = 1
+
+[node name="ProgressSection" type="Control" parent="ConceptTracker/TrackerContainer"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 2
+
+[node name="ProgressText" type="Label" parent="ConceptTracker/TrackerContainer/ProgressSection"]
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 18
+text = "🎯 Current: Pull Force
+⚡ Concepts: 2/6
+🔬 Demos seen: 1
+🏆 Achievements: 2
+📊 Actions: 16"
+autowrap_mode = 3
+
+[node name="AchievementNotification" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 407.0
+offset_top = 30.0
+offset_right = 757.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0wkvo")
+
+[node name="AchievementContainer" type="VBoxContainer" parent="AchievementNotification"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 330.0
+offset_bottom = 85.0
+
+[node name="IconSection" type="Control" parent="AchievementNotification/AchievementContainer"]
+custom_minimum_size = Vector2(310, 30)
+layout_mode = 2
+
+[node name="AchievementIcon" type="Label" parent="AchievementNotification/AchievementContainer/IconSection"]
+layout_mode = 0
+offset_right = 310.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+text = "🏆"
+horizontal_alignment = 1
+
+[node name="TextSection" type="Control" parent="AchievementNotification/AchievementContainer"]
+custom_minimum_size = Vector2(310, 40)
+layout_mode = 2
+
+[node name="AchievementText" type="Label" parent="AchievementNotification/AchievementContainer/TextSection"]
+layout_mode = 0
+offset_right = 310.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Physics Concept Mastered: Pull Force"
+horizontal_alignment = 1
+
+[node name="TutorialOverlay" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="OverlayBackground" type="ColorRect" parent="TutorialOverlay"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.3)
+
+[node name="Spotlight" type="Panel" parent="TutorialOverlay"]
+visible = false
+layout_mode = 0
+offset_left = 400.0
+offset_top = 300.0
+offset_right = 600.0
+offset_bottom = 400.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_or0so")
+
+[node name="HintArrow" type="Label" parent="TutorialOverlay"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 250.0
+offset_right = 525.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 24
+text = "👆"
+horizontal_alignment = 1
+
+[node name="ProgressIndicators" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 760.0
+offset_top = 1000.0
+offset_right = 1160.0
+offset_bottom = 1060.0
+
+[node name="ProgressContainer" type="HBoxContainer" parent="ProgressIndicators"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 60.0
+
+[node name="ConceptDot1" type="Panel" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kh63o")
+
+[node name="DotLabel" type="Label" parent="ProgressIndicators/ProgressContainer/ConceptDot1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer1" type="Control" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+
+[node name="ConceptDot2" type="Panel" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6iyo6")
+
+[node name="DotLabel" type="Label" parent="ProgressIndicators/ProgressContainer/ConceptDot2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+
+[node name="ConceptDot3" type="Panel" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j8hk0")
+
+[node name="DotLabel" type="Label" parent="ProgressIndicators/ProgressContainer/ConceptDot3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+
+[node name="ConceptDot4" type="Panel" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_in336")
+
+[node name="DotLabel" type="Label" parent="ProgressIndicators/ProgressContainer/ConceptDot4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer4" type="Control" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+
+[node name="ConceptDot5" type="Panel" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0b202")
+
+[node name="DotLabel" type="Label" parent="ProgressIndicators/ProgressContainer/ConceptDot5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer5" type="Control" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+
+[node name="ConceptDot6" type="Panel" parent="ProgressIndicators/ProgressContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3t1jq")
+
+[node name="DotLabel" type="Label" parent="ProgressIndicators/ProgressContainer/ConceptDot6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HintSystem" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 1600.0
+offset_top = 910.0
+offset_right = 1900.0
+offset_bottom = 1060.0
+
+[node name="HintPanel" type="Panel" parent="HintSystem"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dnqjb")
+
+[node name="HintContainer" type="VBoxContainer" parent="HintSystem/HintPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 285.0
+offset_bottom = 135.0
+
+[node name="HintTitle" type="Label" parent="HintSystem/HintPanel/HintContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "💡 Physics Hint"
+horizontal_alignment = 1
+
+[node name="HintText" type="Label" parent="HintSystem/HintPanel/HintContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "Try different actions to learn physics concepts!"
+autowrap_mode = 3
+
+[node name="CelebrationEffects" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="ParticleContainer" type="Control" parent="CelebrationEffects"]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CelebrationText" type="Label" parent="CelebrationEffects"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 324.0
+offset_right = 1110.0
+offset_bottom = 404.0
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 32
+text = "🎉 AMAZING! 🎉"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CelebrationStar1" type="Label" parent="CelebrationEffects"]
+layout_mode = 0
+offset_left = 1202.41
+offset_top = 542.677
+offset_right = 1252.41
+offset_bottom = 592.677
+theme_override_colors/font_color = Color(1, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 24
+text = "⭐"
+horizontal_alignment = 1
+
+[node name="CelebrationStar2" type="Label" parent="CelebrationEffects"]
+layout_mode = 0
+offset_left = 1917.48
+offset_top = 342.449
+offset_right = 1967.48
+offset_bottom = 392.449
+theme_override_colors/font_color = Color(1, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 24
+text = "⭐"
+horizontal_alignment = 1
+
+[node name="CelebrationStar3" type="Label" parent="CelebrationEffects"]
+layout_mode = 0
+offset_left = 1504.14
+offset_top = 617.538
+offset_right = 1554.14
+offset_bottom = 667.538
+theme_override_colors/font_color = Color(1, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 24
+text = "⭐"
+horizontal_alignment = 1
+
+[node name="CelebrationStar4" type="Label" parent="CelebrationEffects"]
+layout_mode = 0
+offset_left = 160.674
+offset_top = 21.3067
+offset_right = 210.674
+offset_bottom = 71.3067
+theme_override_colors/font_color = Color(1, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 24
+text = "⭐"
+horizontal_alignment = 1
+
+[node name="CelebrationStar5" type="Label" parent="CelebrationEffects"]
+layout_mode = 0
+offset_left = 1908.12
+offset_top = 483.145
+offset_right = 1958.12
+offset_bottom = 533.145
+theme_override_colors/font_color = Color(1, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 24
+text = "⭐"
+horizontal_alignment = 1

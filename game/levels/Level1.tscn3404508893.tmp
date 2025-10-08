@@ -1,0 +1,201 @@
+[gd_scene load_steps=16 format=3 uid="uid://dspwmgmel77fg"]
+
+[ext_resource type="Script" uid="uid://drt6wdv2of12g" path="res://game/level1.gd" id="1_pvm5u"]
+[ext_resource type="TileSet" uid="uid://d0cnygwy43wif" path="res://resources/tilesets/PrototypeTileSet_normal.tres" id="1_tr6w5"]
+[ext_resource type="TileSet" uid="uid://doqnpiu1rnotq" path="res://resources/tilesets/PrototypeTileSet_Rough.tres" id="2_hly46"]
+[ext_resource type="TileSet" uid="uid://bj43axnkqh613" path="res://resources/tilesets/PrototypeTileSet_Slippery.tres" id="3_piu6i"]
+[ext_resource type="PackedScene" uid="uid://07uka8d8pw5x" path="res://scene/player/Player.tscn" id="4_0pp0u"]
+[ext_resource type="Script" uid="uid://k6r4q04fpddg" path="res://game/levels/delivery_zone_1.gd" id="5_yav7s"]
+[ext_resource type="PackedScene" uid="uid://dosqrhksiw38l" path="res://scene/objects/trolley.tscn" id="6_7vf5n"]
+[ext_resource type="PackedScene" uid="uid://b1l3knb2cm2ig" path="res://scripts/ui/Control_Node_UI.tscn" id="8_7f7u8"]
+[ext_resource type="Texture2D" uid="uid://c4veemga8nrrv" path="res://assets/backgrounds/sky 2.png" id="8_byfol"]
+[ext_resource type="Texture2D" uid="uid://bhqysikswgw1" path="res://assets/cloud/clouds_2 1.png" id="9_j75d0"]
+[ext_resource type="Texture2D" uid="uid://dgxhsjqul3vyt" path="res://assets/cloud/clouds_3 1.png" id="10_bmdoj"]
+[ext_resource type="Texture2D" uid="uid://cjbgqqhl1kgu6" path="res://assets/platform assets/GroupTrain.png" id="11_bmdoj"]
+[ext_resource type="Texture2D" uid="uid://db61e6bheibof" path="res://assets/train/cartoontrain.png" id="12_inkke"]
+[ext_resource type="Texture2D" uid="uid://chhb665cpjrl5" path="res://assets/platform assets/railway station.png" id="12_rgi3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piu6i"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(0, 651)
+script = ExtResource("1_pvm5u")
+
+[node name="Surfaces" type="Node2D" parent="."]
+position = Vector2(382, 0)
+
+[node name="TileMap_Normal" type="TileMap" parent="Surfaces" groups=["surfaces"]]
+position = Vector2(-1, -1)
+tile_set = ExtResource("1_tr6w5")
+format = 2
+layer_0/tile_data = PackedInt32Array(2, 65537, 0, 3, 65537, 0, 4, 65537, 0, 5, 65537, 0, 6, 65537, 0, 7, 65537, 0, 8, 65537, 0, 9, 65537, 0, 10, 65537, 0, 11, 65537, 0, 12, 65537, 0, 13, 65537, 0, 14, 65537, 0, 15, 65537, 0, 16, 65537, 0, 17, 65537, 0, 18, 65537, 0, 19, 65537, 0, 20, 65537, 0, 21, 65537, 0, 22, 65537, 0, 23, 65537, 0, 65536, 65537, 1, 65537, 65537, 1, 65538, 65537, 1, 65539, 65537, 1, 65540, 65537, 1, 65541, 65537, 1, 65542, 65537, 1, 65543, 65537, 1, 65544, 65537, 1, 65545, 65537, 1, 65546, 65537, 1, 65547, 65537, 1, 65548, 65537, 1, 65549, 65537, 1, 65550, 65537, 1, 65551, 65537, 1, 65552, 65537, 1, 65553, 65537, 1, 65554, 65537, 1, 65555, 65537, 1, 65556, 65537, 1, 65557, 65537, 1, 65558, 65537, 1, 65559, 65537, 1, 24, 65537, 0, 25, 65537, 0, 26, 65537, 0, 27, 65537, 0, 28, 65537, 0, 29, 131073, 0, 65560, 65537, 1, 65561, 65537, 1, 65562, 65537, 1, 65563, 65537, 1, 65564, 65537, 1, 65565, 65537, 1, 590563, 65537, 1, 80, 196609, 4, 79, 131073, 4, 0, 1, 0, 1, 65537, 0, 65535, 1, 0, 131071, 1, 0, 65524, 1, 0, 131060, 65537, 1, 65525, 1, 0, 131061, 65537, 1, 65526, 1, 0, 131062, 65537, 1, 65527, 1, 0, 131063, 65537, 1, 65528, 1, 0, 131064, 65537, 1, 65529, 1, 0, 131065, 65537, 1, 65530, 1, 0, 131066, 65537, 1, 65531, 1, 0, 131067, 65537, 1, 65532, 1, 0, 131068, 65537, 1, 65533, 1, 0, 131069, 65537, 1, 65534, 1, 0, 131070, 65537, 1)
+
+[node name="TileMap_Rough" type="TileMap" parent="Surfaces" groups=["surfaces"]]
+tile_set = ExtResource("2_hly46")
+format = 2
+layer_0/tile_data = PackedInt32Array(3, 65537, 0, 4, 65537, 0, 5, 65537, 0, 6, 65537, 0, -65519, 262145, 4, -65518, 327681, 4, -65516, 1, 4, 59, 131073, 4, 60, 196609, 4)
+
+[node name="TileMap_Slippery" type="TileMap" parent="Surfaces" groups=["surfaces"]]
+tile_set = ExtResource("3_piu6i")
+format = 2
+layer_0/tile_data = PackedInt32Array(11, 65537, 0, 12, 65537, 0, 13, 65537, 0, 14, 65537, 0, -65521, 65537, 0, -65520, 65537, 0, -65515, 65537, 4, -65526, 65537, 0, -65525, 65537, 0, -65524, 65537, 0, -65523, 65537, 0, -65527, 196609, 4, -65528, 131073, 4, -65522, 65537, 0, 30, 196609, 0, 31, 196609, 0, 32, 196609, 0, 33, 196609, 0, 34, 196609, 0, 35, 196609, 0, 36, 196609, 0, 37, 196609, 0, 38, 196609, 0, 39, 196609, 0, 40, 196609, 0, -65506, 131073, 4, -65505, 196609, 4, -65504, 196609, 5, -65503, 196609, 5, -65502, 196609, 5, -65501, 196609, 5, -65500, 196609, 5, -65499, 196609, 5, -65498, 196609, 5, -65497, 196609, 5, -65496, 196609, 5, -131040, 131073, 4, -131039, 196609, 4, -131038, 65537, 0, -131037, 65537, 0, -131036, 65537, 0, -131035, 65537, 0, -131034, 65537, 0, -131033, 65537, 0, -131032, 65537, 0, -131031, 262145, 4, -65495, 131073, 5, -131030, 327681, 4, -65493, 262145, 4, -65494, 262145, 5, 41, 196609, 0, 42, 262145, 5, 43, 262145, 5, 44, 262145, 5, 46, 327681, 4, -65492, 327681, 4, -196574, 1, 4, -196573, 1, 5, -196572, 65537, 5, -196571, 65537, 5, -196570, 65537, 5, -196569, 65537, 5, -196568, 65537, 4, -262108, 196609, 4, -262109, 131073, 4, -262107, 262145, 0, -262106, 262145, 0, -262105, 65537, 4, 45, 262145, 4, -131062, 131073, 4, -131056, 327681, 4, -131057, 262145, 4, -131061, 196609, 4, -131060, 196609, 1, -131059, 196609, 1, -131058, 196609, 1, 65566, 196609, 0, 65567, 196609, 0, 65568, 196609, 0, 65569, 196609, 0, 65570, 196609, 0, 65571, 196609, 0, 65572, 196609, 0, 65573, 196609, 0, 65574, 196609, 0, 65575, 196609, 0, 65576, 196609, 0, 65577, 196609, 0, 65578, 196609, 0, 65579, 196609, 0, 65580, 196609, 0, 65581, 196609, 0, 65582, 196609, 0, 65583, 196609, 0, 65584, 196609, 0, 65585, 196609, 0, 65586, 196609, 0, 65587, 196609, 0, 65588, 196609, 0, 65589, 196609, 0, 65590, 196609, 0, 65591, 196609, 0, 65592, 196609, 0, 65593, 196609, 0, 65594, 196609, 0, 65595, 196609, 0, 65596, 196609, 0, 65597, 196609, 0, 61, 196609, 0, 62, 196609, 0, 63, 196609, 0, 64, 196609, 0, 65, 196609, 0, 66, 196609, 0, 67, 196609, 0, 68, 196609, 0, 65604, 196609, 0, 65605, 196609, 0, 65606, 196609, 0, 65607, 196609, 0, 65608, 196609, 0, 65609, 196609, 0, 65610, 196609, 0, 65611, 196609, 0, 65612, 196609, 0, 65613, 196609, 0, 65614, 196609, 0, 65615, 196609, 0, 65616, 196609, 0, 65617, 196609, 0, 81, 196609, 0, 82, 196609, 0, 83, 196609, 0, 84, 196609, 0, 85, 196609, 0, 86, 196609, 0, 87, 196609, 0, 88, 196609, 0, 89, 196609, 0, 90, 196609, 0, 91, 196609, 0, -65445, 196609, 0, -65446, 196609, 0, 65598, 196609, 0, 65599, 196609, 0, 65600, 196609, 0, 65601, 196609, 0, 65602, 196609, 0, 65603, 196609, 0, 65618, 196609, 0, 65619, 196609, 0, 65620, 196609, 0, 65621, 196609, 0, 65622, 196609, 0, 92, 196609, 0, 65627, 196609, 0, 65626, 196609, 0, 65623, 196609, 0, 65624, 196609, 0, 65625, 196609, 0, 65628, 196609, 0, 65629, 196609, 0, 65630, 196609, 0, 94, 196609, 0, 93, 196609, 0, -65443, 196609, 0, -65444, 196609, 0, -130979, 196609, 0, -130978, 196609, 0, -65442, 196609, 0, -196514, 196609, 0, -196515, 196609, 0, -196516, 196609, 0, -130980, 196609, 0, -130981, 196609, 0, -196517, 196609, 0)
+
+[node name="GameElements" type="Node2D" parent="."]
+
+[node name="PlayerSpawn" type="Marker2D" parent="GameElements"]
+position = Vector2(157, -45)
+
+[node name="DeliveryZones" type="Node2D" parent="GameElements"]
+position = Vector2(2433, -48)
+scale = Vector2(0.085, 0.04)
+
+[node name="DeliveryZone1" type="Area2D" parent="GameElements/DeliveryZones"]
+position = Vector2(4751.26, -125)
+script = ExtResource("5_yav7s")
+
+[node name="ColorRect" type="ColorRect" parent="GameElements/DeliveryZones/DeliveryZone1"]
+offset_right = 128.0
+offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameElements/DeliveryZones/DeliveryZone1"]
+position = Vector2(128, 128)
+scale = Vector2(200, 200)
+shape = SubResource("RectangleShape2D_piu6i")
+
+[node name="Player" parent="GameElements" instance=ExtResource("4_0pp0u")]
+position = Vector2(195, -30)
+scale = Vector2(0.987967, 0.924654)
+
+[node name="Camera2D" type="Camera2D" parent="GameElements/Player"]
+position = Vector2(-188.265, 29.2001)
+zoom = Vector2(2.63, 2.63)
+limit_left = 0
+limit_top = 300
+limit_right = 10000
+limit_bottom = 500
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Trolley" parent="GameElements" instance=ExtResource("6_7vf5n")]
+position = Vector2(16, -35)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GameUI" parent="UI" instance=ExtResource("8_7f7u8")]
+
+[node name="CompletionUI" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="_ColorRect_5" type="ColorRect" parent="UI/CompletionUI"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="CompletionContainer" type="VBoxContainer" parent="UI/CompletionUI"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = -200.0
+offset_bottom = -150.0
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="UI/CompletionUI/CompletionContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "LEVEL COMPLETE!"
+
+[node name="TimeLabel" type="Label" parent="UI/CompletionUI/CompletionContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Time: 0.0 seconds"
+
+[node name="StarsLabel" type="Label" parent="UI/CompletionUI/CompletionContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "☆☆☆"
+
+[node name="spacer" type="Control" parent="UI/CompletionUI/CompletionContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="_HBoxContainer_7" type="HBoxContainer" parent="UI/CompletionUI/CompletionContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="NextButton" type="Button" parent="UI/CompletionUI/CompletionContainer/_HBoxContainer_7"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Next Level"
+
+[node name="RetryButton" type="Button" parent="UI/CompletionUI/CompletionContainer/_HBoxContainer_7"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Retry"
+
+[node name="ParallaxBackgroundBack" type="ParallaxBackground" parent="."]
+layer = -1
+offset = Vector2(0, 200)
+scale = Vector2(0.44, 0.44)
+transform = Transform2D(0.44, 0, 0, 0.44, 0, 200)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackgroundBack"]
+motion_mirroring = Vector2(1800, 0)
+
+[node name="Sky2" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer"]
+position = Vector2(959.667, 542)
+scale = Vector2(1.98889, 1.98889)
+texture = ExtResource("8_byfol")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackgroundBack"]
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Clouds21" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer2"]
+position = Vector2(488.636, 568.182)
+scale = Vector2(1.54545, 1.54545)
+texture = ExtResource("9_j75d0")
+
+[node name="Clouds31" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer2"]
+position = Vector2(1011.36, 579.545)
+texture = ExtResource("10_bmdoj")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackgroundBack"]
+position = Vector2(1168.18, -120.455)
+scale = Vector2(1.72728, 1.72728)
+motion_scale = Vector2(1.3, 1.3)
+
+[node name="GroupTrain" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer3"]
+visible = false
+position = Vector2(329, 594)
+texture = ExtResource("11_bmdoj")
+
+[node name="Cartoontrain" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer3"]
+position = Vector2(849.998, 586.84)
+scale = Vector2(1.1585, 1.15728)
+texture = ExtResource("12_inkke")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackgroundBack"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(4000, 0)
+
+[node name="RailwayStation" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer4"]
+position = Vector2(2081.82, 747.727)
+texture = ExtResource("12_rgi3b")
+
+[node name="ParallaxBackgroundFront" type="ParallaxBackground" parent="."]
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackgroundFront"]
+scale = Vector2(1.00106, 1)

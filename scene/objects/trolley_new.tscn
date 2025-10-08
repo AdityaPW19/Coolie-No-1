@@ -1,0 +1,198 @@
+[gd_scene load_steps=12 format=3 uid="uid://cvn6i8k5b5261"]
+
+[ext_resource type="Script" uid="uid://bpg4jgp7k18w3" path="res://new_scripts/Trolley.gd" id="1_i2ngc"]
+[ext_resource type="Texture2D" uid="uid://dnojk427cmdyd" path="res://assets/trolly/trolley without wheel.png" id="2_sjvsb"]
+[ext_resource type="Texture2D" uid="uid://ckdw6854xssen" path="res://assets/trolly/wheel1 (1).png" id="3_f5wls"]
+[ext_resource type="Texture2D" uid="uid://di0mos5gngya" path="res://assets/station assets/luggage.png" id="4_sjvsb"]
+[ext_resource type="FontFile" uid="uid://ckln5pfhiy3bx" path="res://assets/fonts/Raventure.otf" id="5_f5wls"]
+[ext_resource type="Texture2D" uid="uid://ysfy0edla14a" path="res://assets/graphics/pngtree-comic-dust-cloud-with-car-gas-and-bubble-explosion-vector-png-image_49995780-Photoroom.png" id="6_hp7rc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywwrt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sjvsb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vc367"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f5wls")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0x6xs"]
+radius = 3.66678
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eig5p"]
+size = Vector2(76.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2ngc"]
+size = Vector2(260.923, 125.615)
+
+[node name="Trolley" type="RigidBody2D" groups=["trolleys"]]
+collision_layer = 4
+center_of_mass_mode = 1
+center_of_mass = Vector2(84.91, 0)
+script = ExtResource("1_i2ngc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(69, 17)
+scale = Vector2(0.203125, 0.203125)
+sprite_frames = SubResource("SpriteFrames_ywwrt")
+
+[node name="RightCollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(37, 9, 40, 10, 42, 12, 43, 15, 44, 19, 43, 20, 43, 22, 45, 22, 46, 24, 45, 25, 44, 27, 43, 29, 44, 30, 45, 30, 46, 26, 48, 25, 50, 22, 65, 18, 70, 21, 64, 21, 64, 23, 72, 23, 73, 26, 74, 26, 74, 23, 79, 23, 91, 23, 91, 13, 94, 13, 97, 15, 99, 13, 98, 12, 99, 11, 98, 7, 48, 19, 47, 16, 45, 9, 43, 8, 39, 8)
+disabled = true
+
+[node name="WheelHolderRight" type="PinJoint2D" parent="."]
+position = Vector2(90, 22)
+node_a = NodePath("..")
+node_b = NodePath("Wheel")
+bias = 0.9
+
+[node name="Wheel" type="RigidBody2D" parent="WheelHolderRight"]
+collision_layer = 4
+linear_damp = 28.108
+
+[node name="WheelsSpriteAnimated" type="AnimatedSprite2D" parent="WheelHolderRight/Wheel"]
+scale = Vector2(0.149535, 0.149535)
+sprite_frames = SubResource("SpriteFrames_vc367")
+
+[node name="CollisionWheel" type="CollisionShape2D" parent="WheelHolderRight/Wheel"]
+modulate = Color(0.630993, 0.26154, 0.0051704, 1)
+self_modulate = Color(0.6756, 0.375282, 0.0814099, 1)
+scale = Vector2(3.285, 3.145)
+shape = SubResource("CircleShape2D_0x6xs")
+
+[node name="WheelHolderLeft" type="PinJoint2D" parent="."]
+position = Vector2(47, 22)
+node_a = NodePath("..")
+node_b = NodePath("Wheel")
+bias = 0.9
+
+[node name="Wheel" type="RigidBody2D" parent="WheelHolderLeft"]
+collision_layer = 4
+linear_damp = 26.203
+
+[node name="WheelsSpriteAnimated" type="AnimatedSprite2D" parent="WheelHolderLeft/Wheel"]
+scale = Vector2(0.149535, 0.149535)
+sprite_frames = SubResource("SpriteFrames_vc367")
+
+[node name="CollisionWheel" type="CollisionShape2D" parent="WheelHolderLeft/Wheel"]
+modulate = Color(0.630993, 0.26154, 0.0051704, 1)
+self_modulate = Color(0.6756, 0.375282, 0.0814099, 1)
+scale = Vector2(3.285, 3.145)
+shape = SubResource("CircleShape2D_0x6xs")
+
+[node name="PlayerPointLeft" type="Marker2D" parent="."]
+position = Vector2(23, 3)
+
+[node name="PlayerPointRight" type="Marker2D" parent="."]
+position = Vector2(112, 3)
+
+[node name="LeftTrolleyWheelPosition" type="Marker2D" parent="."]
+position = Vector2(47, 22)
+
+[node name="RightTrolleyWheelPosition" type="Marker2D" parent="."]
+position = Vector2(90, 22)
+
+[node name="InteractionArea" type="Area2D" parent="."]
+visible = false
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(68.75, 14)
+shape = SubResource("RectangleShape2D_eig5p")
+
+[node name="LeftCollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(5, 8)
+polygon = PackedVector2Array(34, -1, 33, 3, 34, 5, 39, 5, 41, 4, 41, 15, 58, 15, 68, 15, 68, 10, 82, 14, 82, 15, 84, 16, 85, 18, 87, 21, 87, 22, 88, 22, 88, 20, 87, 17, 86, 16, 87, 14, 89, 14, 89, 12, 88, 11, 89, 6, 90, 3, 93, 1, 94, 1, 94, 0, 92, 0, 89, 0, 87, 3, 85, 9, 85, 11)
+disabled = true
+
+[node name="RightCollision" type="CollisionShape2D" parent="."]
+position = Vector2(71.5, 20.7578)
+scale = Vector2(0.203125, 0.203125)
+shape = SubResource("RectangleShape2D_i2ngc")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="."]
+position = Vector2(71.5, 20.7578)
+scale = Vector2(0.203125, 0.203125)
+shape = SubResource("RectangleShape2D_i2ngc")
+disabled = true
+
+[node name="LuggageHolder" type="PinJoint2D" parent="."]
+node_a = NodePath("..")
+node_b = NodePath("Luggage")
+bias = 0.801
+softness = 0.1
+
+[node name="Luggage" type="RigidBody2D" parent="LuggageHolder"]
+position = Vector2(73, 1.19209e-07)
+rotation = 0.0306585
+collision_layer = 2
+collision_priority = 2.0
+
+[node name="LuggageSpriteLeft" type="Sprite2D" parent="LuggageHolder/Luggage"]
+position = Vector2(-0.999542, 0.0306528)
+rotation = -0.249979
+scale = Vector2(0.114841, 0.114841)
+texture = ExtResource("4_sjvsb")
+
+[node name="LuggageSpriteRight" type="Sprite2D" parent="LuggageHolder/Luggage"]
+visible = false
+position = Vector2(-0.968882, 1.03018)
+rotation = 0.194792
+scale = Vector2(0.114841, 0.114841)
+texture = ExtResource("4_sjvsb")
+
+[node name="Text" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 0.021
+offset_left = 24.0
+offset_top = -60.0
+offset_right = 376.275
+offset_bottom = 66.0
+scale = Vector2(0.261667, 0.261667)
+theme_override_colors/default_color = Color(1, 1, 0.0235294, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/normal_font = ExtResource("5_f5wls")
+theme_override_font_sizes/normal_font_size = 43
+text = "Pick Up
+The Trolley"
+tab_size = 7
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DustParticles" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(39, 30)
+rotation = -6.28319
+scale = Vector2(0.1, 0.1)
+amount = 2
+texture = ExtResource("6_hp7rc")
+lifetime = 0.31
+preprocess = 3.82
+speed_scale = 0.5
+gravity = Vector2(-1000, 0)
+radial_accel_max = 50.1
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

@@ -1,0 +1,1252 @@
+[gd_scene load_steps=29 format=3 uid="uid://de4yrhxwvguri"]
+
+[ext_resource type="Script" uid="uid://c4467tsqccoa8" path="res://scene/cutscenes/cut_scene_1.gd" id="1_gcj2u"]
+[ext_resource type="Texture2D" uid="uid://q6dgyc1l0wvs" path="res://assets/CutScene_Assets/a_busy_indian_train_station_platform_warm.jpeg" id="1_vkevs"]
+[ext_resource type="Texture2D" uid="uid://mvysj1a0h4th" path="res://assets/CutScene_Assets/Generated Image June 26, 2025 - 4_53PM2 (1)-Photoroom.png" id="2_f5suo"]
+[ext_resource type="Shader" uid="uid://juyvkqwnbkgi" path="res://shaders/BlurShader.gdshader" id="2_hsoui"]
+[ext_resource type="Texture2D" uid="uid://8olvhfb05mji" path="res://assets/graphics/splash red.png" id="5_hsoui"]
+[ext_resource type="FontFile" uid="uid://ckln5pfhiy3bx" path="res://assets/fonts/Raventure.otf" id="6_ailwk"]
+[ext_resource type="Texture2D" uid="uid://ehcj2e7ty6nr" path="res://assets/CutScene_Assets/Generated Image July 04, 2025 - 2_1422.png" id="7_7r7dm"]
+[ext_resource type="Texture2D" uid="uid://b541s2tsv5tjs" path="res://assets/CutScene_Assets/vendor.png" id="8_j7b2c"]
+[ext_resource type="Texture2D" uid="uid://bsx2xs87enccu" path="res://assets/ui_assets/dialogue box.png" id="9_wi0hu"]
+[ext_resource type="Texture2D" uid="uid://bco3x6rtdiqla" path="res://assets/CutScene_Assets/Gemini_Generated_Image_8t15mx8t15mx8t152.jpg" id="10_gt27q"]
+[ext_resource type="Texture2D" uid="uid://fdvidhomx224" path="res://assets/buttons/Generated Image August 15, 2025 - 3_05AM-Photoroom (Small).png" id="10_up0cj"]
+[ext_resource type="Texture2D" uid="uid://dgn7oh5uamxqc" path="res://assets/ui_assets/Generated Image July 04, 2025 - 2_57PM-Photoroom.png" id="10_wi0hu"]
+[ext_resource type="Texture2D" uid="uid://wt0tdi8vs823" path="res://assets/CutScene_Assets/Generated Image August 14, 2025 - 11_52PM.jpeg_upscayl_2x_upscayl-standard-4x-Photoroom.png" id="11_lrvns"]
+[ext_resource type="Texture2D" uid="uid://chkp37cwinq41" path="res://assets/CutScene_Assets/Generated Image August 14, 2025 - 11_38PM_upscayl_2x_upscayl-standard-4x-Photoroom.png" id="12_wbu77"]
+[ext_resource type="Texture2D" uid="uid://b0c7rs5cyfxxu" path="res://assets/graphics/light-rays-shine-flash-sun-star.png" id="13_pe8b3"]
+[ext_resource type="Texture2D" uid="uid://btelbrcgl8b5h" path="res://assets/graphics/Green_Leaf_PNG_Clipart@0.1x.png" id="14_br2vx"]
+[ext_resource type="Texture2D" uid="uid://bwj05uubadwm1" path="res://assets/buttons/Generated Image August 15, 2025 - 1_04AM-Photoroom.png" id="14_lrvns"]
+[ext_resource type="Texture2D" uid="uid://bt8525508hxda" path="res://assets/CutScene_Assets/Generated Image August 14, 2025 - 10_28PM-Photoroom.png" id="16_br2vx"]
+[ext_resource type="Texture2D" uid="uid://b8ngnu8c01edx" path="res://assets/graphics/0b5e187fb9f73a3ab2823d9d60f2247e-Photoroom.png" id="17_owuq8"]
+
+[sub_resource type="Animation" id="Animation_br2vx"]
+resource_name = "Coolie_Wearing_Cap"
+length = 3.0765
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot4/Coolie:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(157.927, 351.22), Vector2(351.829, 351.22), Vector2(351.829, 351.22), Vector2(518.819, 351.22)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot4/Cap:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1150, 509.146), Vector2(946.951, 509.146), Vector2(946.951, 509.146), Vector2(865.951, 572.146)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shot3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shot4/LetsGoButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.333333, 0.766667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 0.5, 1),
+"update": 0,
+"values": [Vector2(434.756, 633.683), Vector2(434.756, 467.683), Vector2(434.756, 467.683), Vector2(434.756, 633.683)]
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shot4/LetsGoButton:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shot4/Cap:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.771, 0.771), Vector2(0.501404, 0.501404), Vector2(0.501404, 0.501404), Vector2(0.6, 0.6)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shot4/Coolie:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.485, 0.485), Vector2(0.625389, 0.625389), Vector2(0.625389, 0.625389), Vector2(0.875, 0.875)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shot4/Shot1Bg2:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.685, 0.685), Vector2(0.854984, 0.854984), Vector2(0.854984, 0.854984), Vector2(0.8, 0.8)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shot4/Cap/Shining_Light:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5, 0.866667, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.10509, 1.10509), Vector2(5.07, 5.07), Vector2(5.07, 5.07), Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shot4/Leaves:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.19589, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1812.81, 376.512), Vector2(-753.049, 349.512)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Shot4/GreenLeafPngClipart_0_1x:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.46355, 2.06667),
+"transitions": PackedFloat32Array(0.757858, 1),
+"update": 0,
+"values": [Vector2(2595.22, 356.098), Vector2(-1173.78, 356.098)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Shot4/Coolie:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.66667, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Shot4/Cap:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.63333, 1.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Shot4/Coolie2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.66047, 1.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Shot4/Coolie2:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.86667, 3.06667),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(465.244, 328.659), Vector2(1500, 328.659)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Shot4:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("DialogueBox:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(614.024, 567.073), Vector2(614.024, 780)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("FadeOverlay:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 2.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("FadeOverlay:self_modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(2.93333, 3.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lrvns"]
+resource_name = "Coolie_Wearing_Cap2"
+
+[sub_resource type="Animation" id="Animation_jtdks"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FadeOverlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shot1/Coolie:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(491, 529)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shot1/SplashRed:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shot1/SplashRed:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(499.814, 411.117)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shot1/SplashRed:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.112449, 0.112449)]
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shot1/Shot1Bg:material:shader_parameter/blur_amount")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shot1/Text:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shot1/Text:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(617.37, 339.422)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Shot1/Text:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.95494, 2.95494)]
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Shot1/Text2:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Shot1/Text2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(793.074, 373.189)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Shot1:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Shot2:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Shot2/Shot2Bg:material:shader_parameter/blur_amount")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("DialogueBox:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(614.024, 567.073)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("NextButton:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1177.44, 495.122)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Shot3:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("DialogueBox/Dialogue:text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Chai Wallah: Kishan bhai! Train’s delayed again!
+But passengers are already piling up!"]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Shot4/Coolie:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(351.829, 351.22)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Shot4/Cap:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(770.122, 509.146)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Shot4/LetsGoButton:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(434.756, 467.683)]
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Shot4/LetsGoButton:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Shot4/Cap:scale")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.501404, 0.501404)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Shot4/Coolie:scale")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.625389, 0.625389)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Shot4/Shot1Bg2:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.854984, 0.854984)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Shot4/Cap/Shining_Light:scale")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.10509, 1.10509)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Shot4/Leaves:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2099.39, 419.512)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Shot4/GreenLeafPngClipart_0_1x:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2576.22, 356.098)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Shot4/Coolie:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Shot4/Cap:visible")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Shot4/Coolie2:visible")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Shot4/Coolie2:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(465.244, 328.659)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Shot4:visible")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("SkipButton:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-203.049, 517.683)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("FadeOverlay:visible")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_wi0hu"]
+resource_name = "Vendor1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shot2/Shot2Bg:material:shader_parameter/blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.233333, 0.766666)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogueBox:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.233333, 0.766666),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1600, 540.248), Vector2(590.024, 540.248)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DialogueBox/Dialogue:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Chai Wallah: Kishan bhai! Train’s delayed again! But passengers are already piling up!"]
+}
+
+[sub_resource type="Animation" id="Animation_hsdec"]
+resource_name = "coolie1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogueBox/Dialogue:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Kishan: Let them come! Coolie No. 1 is ready to roll."]
+}
+
+[sub_resource type="Animation" id="Animation_eli5j"]
+resource_name = "cutscene1"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.76667, 2, 2.76667, 4.46667, 6),
+"transitions": PackedFloat32Array(0.707107, 0.5, 0.5, 1, 0.5, 1),
+"update": 0,
+"values": [Vector2(4.765, 4.765), Vector2(1, 1), Vector2(1, 1), Vector2(1.31, 1.31), Vector2(1.31, 1.31), Vector2(1.4, 1.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0329372, 1.76667, 2, 2.76667, 4.43333, 6),
+"transitions": PackedFloat32Array(0.757858, 0.5, 0.5, 1, 0.5, 1),
+"update": 0,
+"values": [Vector2(-2953, -1507), Vector2(0, 0), Vector2(0, 0), Vector2(-356, -194.365), Vector2(-356, -194.365), Vector2(-377.045, -207.355)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FadeOverlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1.73333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shot1/Coolie:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.23333, 1.83333),
+"transitions": PackedFloat32Array(1, 2),
+"update": 0,
+"values": [Vector2(250.315, 529), Vector2(491, 529)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shot1/SplashRed:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shot1/SplashRed:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 2.66667),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(499.814, 411.117), Vector2(721.304, 363.452)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shot1/SplashRed:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2, 2.66667),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0.057, 0.057), Vector2(0.407, 0.407)]
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shot1/Shot1Bg:material:shader_parameter/blur_amount")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6, 0, 0, 0, 0),
+"times": PackedFloat32Array(2, 2.67371)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shot1/Text:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2.33333, 5.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shot1/Text:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.33333, 2.8, 4.63333, 5.03333),
+"transitions": PackedFloat32Array(0.5, 1, 1, 1),
+"update": 0,
+"values": [Vector2(437.37, 339.422), Vector2(648.37, 339.422), Vector2(648.37, 339.422), Vector2(448.925, 353.422)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Shot1/Text:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2, 2.33333, 4.63333, 5.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(2.95494, 2.95494), Vector2(2.95494, 2.95494), Vector2(1.955, 1.955)]
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Shot1/Text2:visible_ratio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(3.83334, 4.56667)
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Shot1/Text2:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(4.63334, 5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(793.074, 373.189), Vector2(648, 373.189)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Shot1:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(4.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Shot2:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(5.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("NextButton:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(5.83333, 6.1, 6.6),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(1177.44, 495.122), Vector2(1177.44, 495.122), Vector2(968.439, 495.122)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("DialogueBox:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(5.8),
+"transitions": PackedFloat32Array(0.5),
+"update": 0,
+"values": [Vector2(1600, 540.248)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Shot3:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("SkipButton:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(2.85895, 3.36667),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-203.049, 495.122), Vector2(1.82927, 495.122)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jtdks"]
+_data = {
+&"Coolie_Wearing_Cap": SubResource("Animation_br2vx"),
+&"Coolie_Wearing_Cap2": SubResource("Animation_lrvns"),
+&"RESET": SubResource("Animation_jtdks"),
+&"Vendor1": SubResource("Animation_wi0hu"),
+&"coolie1": SubResource("Animation_hsdec"),
+&"cutscene1": SubResource("Animation_eli5j")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ailwk"]
+shader = ExtResource("2_hsoui")
+shader_parameter/blur_amount = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hsdec"]
+shader = ExtResource("2_hsoui")
+shader_parameter/blur_amount = 0.0
+
+[node name="CutScene1" type="Node2D"]
+scale = Vector2(1.64, 1.64)
+script = ExtResource("1_gcj2u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jtdks")
+}
+
+[node name="Shot1" type="Node2D" parent="."]
+
+[node name="Shot1Bg" type="Sprite2D" parent="Shot1"]
+material = SubResource("ShaderMaterial_ailwk")
+position = Vector2(595, 325)
+scale = Vector2(0.846914, 0.846914)
+texture = ExtResource("1_vkevs")
+
+[node name="Coolie" type="Sprite2D" parent="Shot1"]
+z_index = 1
+position = Vector2(491, 529)
+scale = Vector2(0.547644, 0.547644)
+texture = ExtResource("2_f5suo")
+
+[node name="SplashRed" type="Sprite2D" parent="Shot1"]
+position = Vector2(499.814, 411.117)
+scale = Vector2(0.112449, 0.112449)
+texture = ExtResource("5_hsoui")
+
+[node name="Text" type="Label" parent="Shot1"]
+offset_left = 617.37
+offset_top = 339.422
+offset_right = 713.37
+offset_bottom = 385.089
+scale = Vector2(2.95494, 2.95494)
+theme_override_fonts/font = ExtResource("6_ailwk")
+text = "Meet 
+Kishan"
+
+[node name="Text2" type="Label" parent="Shot1"]
+offset_left = 793.074
+offset_top = 373.189
+offset_right = 909.074
+offset_bottom = 418.855
+scale = Vector2(2.95494, 2.95494)
+theme_override_fonts/font = ExtResource("6_ailwk")
+text = "The Coolie No 1"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="FadeOverlay" type="ColorRect" parent="."]
+visible = false
+z_index = 5
+offset_left = -28.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = 23.0
+scale = Vector2(30.5667, 17.2182)
+color = Color(0, 0, 0, 1)
+
+[node name="Shot2" type="Node2D" parent="."]
+visible = false
+
+[node name="Shot2Bg" type="Sprite2D" parent="Shot2"]
+material = SubResource("ShaderMaterial_hsdec")
+position = Vector2(585.809, 329.204)
+scale = Vector2(1.2565, 1.2565)
+texture = ExtResource("7_7r7dm")
+
+[node name="Vendor" type="Sprite2D" parent="Shot2"]
+position = Vector2(560.366, 385.366)
+scale = Vector2(1.07808, 1.07808)
+texture = ExtResource("8_j7b2c")
+
+[node name="NextButton" type="Button" parent="."]
+z_index = 2
+offset_left = 1177.44
+offset_top = 495.122
+offset_right = 2209.44
+offset_bottom = 1020.12
+scale = Vector2(0.210758, 0.210758)
+action_mode = 0
+icon = ExtResource("10_wi0hu")
+flat = true
+
+[node name="SkipButton" type="Button" parent="."]
+z_index = 2
+offset_left = -203.049
+offset_top = 517.683
+offset_right = 658.951
+offset_bottom = 956.683
+scale = Vector2(0.228973, 0.228973)
+action_mode = 0
+icon = ExtResource("10_up0cj")
+flat = true
+
+[node name="Shot3" type="Node2D" parent="."]
+
+[node name="Shot1Bg2" type="Sprite2D" parent="Shot3"]
+material = SubResource("ShaderMaterial_ailwk")
+position = Vector2(584.146, 320.732)
+scale = Vector2(0.854984, 0.854984)
+texture = ExtResource("1_vkevs")
+
+[node name="Coolie" type="Sprite2D" parent="Shot3"]
+z_index = 1
+position = Vector2(262.805, 452.439)
+scale = Vector2(0.707648, 0.707648)
+texture = ExtResource("2_f5suo")
+
+[node name="Shot4" type="Node2D" parent="."]
+visible = false
+
+[node name="Shot1Bg2" type="Sprite2D" parent="Shot4"]
+material = SubResource("ShaderMaterial_ailwk")
+position = Vector2(234.146, 320.732)
+scale = Vector2(0.854984, 0.854984)
+texture = ExtResource("10_gt27q")
+flip_h = true
+
+[node name="Coolie" type="Sprite2D" parent="Shot4"]
+z_index = 1
+position = Vector2(351.829, 351.22)
+scale = Vector2(0.625389, 0.625389)
+texture = ExtResource("11_lrvns")
+
+[node name="Cap" type="Sprite2D" parent="Shot4"]
+z_index = 1
+position = Vector2(770.122, 509.146)
+scale = Vector2(0.501404, 0.501404)
+texture = ExtResource("12_wbu77")
+
+[node name="Shining_Light" type="Sprite2D" parent="Shot4/Cap"]
+z_index = -1
+position = Vector2(-10.9447, -260.245)
+scale = Vector2(1.10509, 1.10509)
+texture = ExtResource("13_pe8b3")
+
+[node name="SplashRed" type="Sprite2D" parent="Shot4"]
+visible = false
+position = Vector2(779.878, 114.634)
+scale = Vector2(0.341373, 0.341373)
+texture = ExtResource("5_hsoui")
+
+[node name="Text" type="Label" parent="Shot4/SplashRed"]
+offset_left = -509.064
+offset_top = -42.8685
+offset_right = -409.064
+offset_bottom = -12.8685
+scale = Vector2(14.1458, 14.1458)
+theme_override_fonts/font = ExtResource("6_ailwk")
+text = "Ready?"
+
+[node name="GreenLeafPngClipart_0_1x" type="Sprite2D" parent="Shot4"]
+z_index = 2
+position = Vector2(2576.22, 356.098)
+scale = Vector2(4.11509, 4.11509)
+texture = ExtResource("14_br2vx")
+
+[node name="LetsGoButton" type="TextureButton" parent="Shot4"]
+z_index = 1
+offset_left = 434.756
+offset_top = 467.683
+offset_right = 1458.76
+offset_bottom = 974.683
+scale = Vector2(0.377955, 0.377955)
+texture_normal = ExtResource("14_lrvns")
+
+[node name="Coolie2" type="Sprite2D" parent="Shot4"]
+visible = false
+position = Vector2(465.244, 328.659)
+scale = Vector2(0.730026, 0.730026)
+texture = ExtResource("16_br2vx")
+
+[node name="Leaves" type="Sprite2D" parent="Shot4"]
+z_index = 1
+position = Vector2(2099.39, 419.512)
+scale = Vector2(1.89494, 1.89494)
+texture = ExtResource("17_owuq8")
+
+[node name="DialogueBox" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(614.024, 567.073)
+scale = Vector2(0.455373, 0.455373)
+texture = ExtResource("9_wi0hu")
+
+[node name="Dialogue" type="Label" parent="DialogueBox"]
+offset_left = -655.639
+offset_top = -77.6724
+offset_right = -178.639
+offset_bottom = -17.6724
+scale = Vector2(2.7407, 2.7407)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ailwk")
+theme_override_font_sizes/font_size = 21
+text = "Chai Wallah: Kishan bhai! Train’s delayed again!
+But passengers are already piling up!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="SkipButton" to="." method="_on_next_button_pressed"]

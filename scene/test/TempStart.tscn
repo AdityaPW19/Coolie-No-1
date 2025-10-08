@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6htp081nr3s2"]
+
+[ext_resource type="Script" uid="uid://dgm1d6j24uhof" path="res://scripts/test/TempAutoloadLoader.gd" id="1_jk6wi"]
+
+[node name="TempStart" type="Node"]
+script = ExtResource("1_jk6wi")

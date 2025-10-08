@@ -1,0 +1,137 @@
+[gd_scene load_steps=18 format=3 uid="uid://07uka8d8pw5x"]
+
+[ext_resource type="Texture2D" uid="uid://dtn4ef4gyvsiw" path="res://assets/animations/pull Anims/pullIdle.png" id="2_a5dh7"]
+[ext_resource type="Texture2D" uid="uid://doh7ttbkoa6tu" path="res://assets/animations/Push Anims/pushIdle.png" id="2_rvvvr"]
+[ext_resource type="Texture2D" uid="uid://01x0c7skgadk" path="res://assets/animations/pull Anims/pull2.png" id="3_4kw3b"]
+[ext_resource type="Texture2D" uid="uid://drcc1p68qa24m" path="res://assets/animations/Push Anims/push1.png" id="3_co054"]
+[ext_resource type="Texture2D" uid="uid://ig6ssevknfbx" path="res://assets/animations/pull Anims/pull1.png" id="4_a5dh7"]
+[ext_resource type="Texture2D" uid="uid://b2l8iqusm18j6" path="res://assets/animations/Push Anims/push2.png" id="4_xewb5"]
+[ext_resource type="Texture2D" uid="uid://ukmx4hk3olnd" path="res://assets/animations/Push Anims/push3.png" id="5_4kw3b"]
+[ext_resource type="Texture2D" uid="uid://crw704iphu5q" path="res://assets/animations/pull Anims/pull3.png" id="5_c12fn"]
+[ext_resource type="Texture2D" uid="uid://ce7dh3rlh8kqs" path="res://assets/animations/walk/walk.png" id="10_77j1f"]
+[ext_resource type="Texture2D" uid="uid://bl40wsohwpr8r" path="res://assets/animations/walk/walk3.png" id="11_pnt7x"]
+[ext_resource type="Texture2D" uid="uid://dbo4itbv8yhxj" path="res://assets/animations/walk/walk2.png" id="12_seimy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5dh7"]
+size = Vector2(20, 29.6121)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77j1f"]
+size = Vector2(11.875, 25.9274)
+
+[sub_resource type="Gradient" id="Gradient_tt56r"]
+offsets = PackedFloat32Array(0, 0.121951, 0.284553, 0.479675, 0.560976, 0.691057, 0.837398, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.121951, 0.121951, 0.121951, 1, 0.284553, 0.284553, 0.284553, 1, 0.473936, 0.473936, 0.473936, 1, 0.552846, 0.552846, 0.552846, 1, 0.691057, 0.691057, 0.691057, 1, 0.837398, 0.837398, 0.837398, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_88688"]
+gradient = SubResource("Gradient_tt56r")
+width = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt56r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tt56r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a5dh7")
+}],
+"loop": true,
+"name": &"idlePulling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rvvvr")
+}],
+"loop": true,
+"name": &"idlePushing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4kw3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a5dh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c12fn")
+}],
+"loop": true,
+"name": &"pulling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_co054")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xewb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4kw3b")
+}],
+"loop": true,
+"name": &"pushing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_77j1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pnt7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_seimy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = "res://scripts/player/Player.gd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -0.499985)
+scale = Vector2(1.6, 2.26259)
+shape = SubResource("RectangleShape2D_a5dh7")
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 4)
+scale = Vector2(1.6, 2.26259)
+shape = SubResource("RectangleShape2D_77j1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("GradientTexture2D_88688")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+position = Vector2(0.35, 1)
+scale = Vector2(2.72, 1.36)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(1.7, 2.6)
+shape = SubResource("RectangleShape2D_tt56r")
+
+[node name="ForceIndicator" type="Node2D" parent="."]
+
+[node name="arrow" type="Sprite2D" parent="ForceIndicator"]
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -50.0
+offset_right = 20.0
+offset_bottom = -27.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 4)
+scale = Vector2(0.164063, 0.164063)
+sprite_frames = SubResource("SpriteFrames_tt56r")
+animation = &"pushing"
+
+[node name="TrolleyAnchor" type="Marker2D" parent="."]
+position = Vector2(-10, 16)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dik0xakk33fin"
+path="res://.godot/imported/game-music-player-console-8bit-background-intro-theme-297305 compressed.mp3-8b3997777c64e1b975fd51e49724b8ee.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/game-music-player-console-8bit-background-intro-theme-297305 compressed.mp3"
+dest_files=["res://.godot/imported/game-music-player-console-8bit-background-intro-theme-297305 compressed.mp3-8b3997777c64e1b975fd51e49724b8ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

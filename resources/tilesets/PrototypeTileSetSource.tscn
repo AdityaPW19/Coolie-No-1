@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0pytopchi2cl"]
+
+[ext_resource type="Script" uid="uid://bh4lrkxfrokq8" path="res://resources/tilesets/static_body_rough_2d.gd" id="1_5vewf"]
+[ext_resource type="Script" uid="uid://c6s28ek1thaxw" path="res://resources/tilesets/static_body_slippery_2d.gd" id="2_ce8y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvsf3"]
+size = Vector2(32, 32)
+
+[node name="TileSetSource" type="Node2D"]
+
+[node name="Platform" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
+shape = SubResource("RectangleShape2D_pvsf3")
+
+[node name="RoughSurface" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RoughSurface"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RoughSurface"]
+script = ExtResource("1_5vewf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoughSurface/StaticBody2D"]
+shape = SubResource("RectangleShape2D_pvsf3")
+
+[node name="SlipperySurface" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SlipperySurface"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SlipperySurface"]
+script = ExtResource("2_ce8y7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlipperySurface/StaticBody2D"]
+
+[node name="RampUp" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RampUp"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RampUp"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RampUp/StaticBody2D"]
+
+[node name="RampDown" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RampDown"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RampDown"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RampDown/StaticBody2D"]

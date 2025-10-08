@@ -1,0 +1,330 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1l3knb2cm2ig"]
+
+[ext_resource type="Script" uid="uid://bpbp2ljnbdw63" path="res://game/levels/GameUI.gd" id="1_iljke"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bhyh"]
+bg_color = Color(0.1, 0.1, 0.15, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.6, 1, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64t0c"]
+bg_color = Color(0.15, 0.1, 0.1, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.6, 0.3, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ovdc"]
+bg_color = Color(0.1, 0.15, 0.1, 0.85)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 1, 0.3, 0.9)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nnk7"]
+bg_color = Color(0.18, 0.24, 0.3, 0.3)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wkhr"]
+bg_color = Color(0.3, 0.3, 0.3, 0.3)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_poqkb"]
+bg_color = Color(0.3, 0.18, 0.18, 0.3)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k40ur"]
+bg_color = Color(0.1, 0.1, 0.2, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.3, 0.8, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6weq"]
+bg_color = Color(0.2, 0.2, 0.1, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bk45w"]
+bg_color = Color(0.1, 0.2, 0.1, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.8, 0.3, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akb5c"]
+bg_color = Color(0.2, 0.1, 0.2, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.3, 0.8, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.988947)
+script = ExtResource("1_iljke")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerStatsPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 140.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7bhyh")
+
+[node name="_VBoxContainer_5" type="VBoxContainer" parent="PlayerStatsPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 110.0
+
+[node name="Title" type="Label" parent="PlayerStatsPanel/_VBoxContainer_5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "PLAYER STATUS"
+
+[node name="StateLabel" type="Label" parent="PlayerStatsPanel/_VBoxContainer_5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "State: IDLE"
+
+[node name="SpeedLabel" type="Label" parent="PlayerStatsPanel/_VBoxContainer_5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Speed: 0 px/s"
+
+[node name="SurfaceLabel" type="Label" parent="PlayerStatsPanel/_VBoxContainer_5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Surface: Normal"
+
+[node name="TrolleyInfoPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 160.0
+offset_right = 300.0
+offset_bottom = 260.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_64t0c")
+
+[node name="_VBoxContainer_6" type="VBoxContainer" parent="TrolleyInfoPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 90.0
+
+[node name="Title" type="Label" parent="TrolleyInfoPanel/_VBoxContainer_6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 16
+text = "TROLLEY INFO"
+
+[node name="WeightLabel" type="Label" parent="TrolleyInfoPanel/_VBoxContainer_6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Weight: 50 kg"
+
+[node name="DistanceLabel" type="Label" parent="TrolleyInfoPanel/_VBoxContainer_6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Distance: 60 px"
+
+[node name="ForceIndicator" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 23.2571
+offset_right = 1085.0
+offset_bottom = 103.257
+scale = Vector2(1.36402, 1.36402)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6ovdc")
+
+[node name="_VBoxContainer_7" type="VBoxContainer" parent="ForceIndicator"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 70.0
+
+[node name="Title" type="Label" parent="ForceIndicator/_VBoxContainer_7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 1, 0.6, 1)
+theme_override_font_sizes/font_size = 18
+text = "FORCE LEVEL"
+horizontal_alignment = 1
+
+[node name="_HBoxContainer_8" type="HBoxContainer" parent="ForceIndicator/_VBoxContainer_7"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ForceLOW" type="Button" parent="ForceIndicator/_VBoxContainer_7/_HBoxContainer_8"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_3nnk7")
+text = "LOW"
+
+[node name="ForceMEDIUM" type="Button" parent="ForceIndicator/_VBoxContainer_7/_HBoxContainer_8"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wkhr")
+text = "MEDIUM"
+
+[node name="ForceHIGH" type="Button" parent="ForceIndicator/_VBoxContainer_7/_HBoxContainer_8"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_poqkb")
+text = "HIGH"
+
+[node name="ProgressBar" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 20.0
+offset_right = 1900.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k40ur")
+
+[node name="_VBoxContainer_9" type="VBoxContainer" parent="ProgressBar"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 290.0
+offset_bottom = 55.0
+
+[node name="Title" type="Label" parent="ProgressBar/_VBoxContainer_9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "DELIVERY PROGRESS"
+horizontal_alignment = 1
+
+[node name="ActualProgress" type="ProgressBar" parent="ProgressBar/_VBoxContainer_9"]
+layout_mode = 2
+show_percentage = false
+
+[node name="DistanceToGoal" type="Label" parent="ProgressBar/_VBoxContainer_9"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Distance: 1000m"
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1720.0
+offset_top = 100.0
+offset_right = 1900.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(1, 1, 0.6, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_s6weq")
+text = "Time: 00:22"
+horizontal_alignment = 1
+
+[node name="ObjectivePanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 960.0
+offset_right = 370.0
+offset_bottom = 1060.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bk45w")
+
+[node name="_VBoxContainer_10" type="VBoxContainer" parent="ObjectivePanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 335.0
+offset_bottom = 90.0
+
+[node name="Title" type="Label" parent="ObjectivePanel/_VBoxContainer_10"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 18
+text = "🎯 OBJECTIVE"
+
+[node name="ObjectiveText" type="Label" parent="ObjectivePanel/_VBoxContainer_10"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Push or pull the trolley to the delivery zone!"
+autowrap_mode = 3
+
+[node name="ControlsHint" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 838.265
+offset_right = 301.0
+offset_bottom = 938.265
+theme_override_styles/panel = SubResource("StyleBoxFlat_akb5c")
+
+[node name="_VBoxContainer_11" type="VBoxContainer" parent="ControlsHint"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 270.0
+offset_bottom = 95.0
+
+[node name="Title" type="Label" parent="ControlsHint/_VBoxContainer_11"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "⌨️ CONTROLS"
+
+[node name="ControlsText" type="Label" parent="ControlsHint/_VBoxContainer_11"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Hold PUSH/PULL to move trolley
+1/2/3 - Force levels
+R - Restart level"
+autowrap_mode = 3

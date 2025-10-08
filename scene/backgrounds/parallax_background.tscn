@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp66m3rcj4vgh"]
+
+[ext_resource type="Texture2D" uid="uid://c4veemga8nrrv" path="res://assets/backgrounds/sky 2.png" id="1_rreb4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rreb4"]
+load_path = "res://.godot/imported/indian train.png-d7667c713b982a8744643aa94515d9d8.ctex"
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1800, 0)
+
+[node name="Sky2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(959.667, 542)
+scale = Vector2(1.98889, 1.98889)
+texture = ExtResource("1_rreb4")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(-583, 214)
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1600, 0)
+
+[node name="IndianTrain" type="Sprite2D" parent="."]
+position = Vector2(739, 657)
+scale = Vector2(4.87037, 4.87037)
+texture = SubResource("CompressedTexture2D_rreb4")

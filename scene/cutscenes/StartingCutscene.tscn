@@ -1,0 +1,428 @@
+[gd_scene load_steps=19 format=3 uid="uid://cmq0kfadg2qc8"]
+
+[ext_resource type="Script" uid="uid://doi2vfe47tte8" path="res://scene/cutscenes/StartingUI.gd" id="1_cih8f"]
+[ext_resource type="Texture2D" uid="uid://b4o4vu8cp4mkv" path="res://assets/CutScene_Assets/2d_side_scrolling_view_of_an_indian_train (3).jpeg" id="3_qf8jl"]
+[ext_resource type="Texture2D" uid="uid://bqi5y1mvyccg1" path="res://assets/CutScene_Assets/Generated Image June 26, 2025 - 8_25PM (1)-Photoroom.png" id="4_0gg0b"]
+[ext_resource type="Texture2D" uid="uid://bdjpu2ssa1xc1" path="res://assets/CutScene_Assets/Generated Image June 26, 2025 - 11_58PM.jpeg (1)-Photoroom.png" id="5_yyu4o"]
+[ext_resource type="Shader" uid="uid://juyvkqwnbkgi" path="res://shaders/BlurShader.gdshader" id="6_ke3bh"]
+[ext_resource type="Texture2D" uid="uid://bco3x6rtdiqla" path="res://assets/CutScene_Assets/Gemini_Generated_Image_8t15mx8t15mx8t152.jpg" id="7_gdwq0"]
+[ext_resource type="Script" uid="uid://c0npi4wr3xco7" path="res://shaders/shaker_node_shake.gd" id="8_tccf1"]
+[ext_resource type="Texture2D" uid="uid://dfw0xifcdrk0a" path="res://assets/ui_assets/create_a_2d_splash_screen_style_graphic_featuring (1)-Photoroom.png" id="9_ajdlv"]
+[ext_resource type="AudioStream" uid="uid://dik0xakk33fin" path="res://assets/audio/game-music-player-console-8bit-background-intro-theme-297305 compressed.mp3" id="10_cih8f"]
+[ext_resource type="Texture2D" uid="uid://j5xji15748tu" path="res://assets/ui_assets/Generated Image June 22, 2025 - 1_44AM (1)-Photoroom.png" id="10_ktgd5"]
+[ext_resource type="AudioStream" uid="uid://r63lrdo6a6t6" path="res://assets/audio/menu-button-88360.mp3" id="11_hfo5s"]
+
+[sub_resource type="Animation" id="Animation_8olwt"]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot1/shot1Coolie:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.47792, 1.47792)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot1/shot1Coolie:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(632, 798)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FadeOverlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shot1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shot2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shot2/Shot2Bg:material:shader_parameter/blur_amount")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.496]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shot2/shot2VCoolie:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(197, 323)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shot2/Shaker Node/IntroTitle:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(956, 305)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shot2/Shaker Node/IntroTitle:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.894372, 0.894372)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/PlayButton:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(611, 417)]
+}
+
+[sub_resource type="Animation" id="Animation_mbx4l"]
+resource_name = "Starting"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shot1/shot1Coolie:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.36668),
+"transitions": PackedFloat32Array(1, 2),
+"update": 0,
+"values": [Vector2(2.728, 2.728), Vector2(0.914323, 0.914323)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot1/shot1Coolie:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00853491, 1.36667),
+"transitions": PackedFloat32Array(1, 2),
+"update": 0,
+"values": [Vector2(632, 960.13), Vector2(632, 549)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FadeOverlay:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.36667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shot1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.36667, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shot2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.36667, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shot2/Shot2Bg:material:shader_parameter/blur_amount")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4, 2.16667),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, 3.821]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shot2/shot2VCoolie:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.4, 2.16667, 5.2),
+"transitions": PackedFloat32Array(0.217638, 0.615572, 1),
+"update": 0,
+"values": [Vector2(-145.39, 323), Vector2(245.335, 323), Vector2(299.245, 323)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shot2/Shaker Node/IntroTitle:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.43333, 4.06667, 5),
+"transitions": PackedFloat32Array(0.217638, 0.5, 1),
+"update": 0,
+"values": [Vector2(-700, 305), Vector2(790.12, 305), Vector2(790.12, 210)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shot2/Shaker Node/IntroTitle:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4.06667, 5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0.894372, 0.894372), Vector2(0.534, 0.534)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/PlayButton:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(4.03333, 4.96667),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(611, 620), Vector2(611, 417)]
+}
+
+[sub_resource type="Animation" id="Animation_4pkki"]
+resource_name = "playPressed"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/PlayButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(611, 417), Vector2(611, 628.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shot2/Shaker Node/IntroTitle:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(790.12, 210), Vector2(790.12, 800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shot2/shot2VCoolie:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.433333, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(299.245, 323), Vector2(1519.94, 323)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FadeOverlay:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.466667, 1.9),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hagrs"]
+_data = {
+&"RESET": SubResource("Animation_8olwt"),
+&"Starting": SubResource("Animation_mbx4l"),
+&"playPressed": SubResource("Animation_4pkki")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hagrs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0gg0b")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_567sh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yyu4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5l1k"]
+shader = ExtResource("6_ke3bh")
+shader_parameter/blur_amount = 3.496
+
+[node name="StartingScene" type="Node2D"]
+scale = Vector2(1.65651, 1.65651)
+script = ExtResource("1_cih8f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hagrs")
+}
+
+[node name="Shot1" type="Node2D" parent="."]
+
+[node name="Shot1Bg" type="Sprite2D" parent="Shot1"]
+position = Vector2(582.445, 321.25)
+scale = Vector2(0.824074, 0.824074)
+texture = ExtResource("3_qf8jl")
+
+[node name="shot1Coolie" type="AnimatedSprite2D" parent="Shot1"]
+position = Vector2(632, 798)
+scale = Vector2(1.47792, 1.47792)
+sprite_frames = SubResource("SpriteFrames_hagrs")
+animation = &"1"
+frame_progress = 0.661374
+
+[node name="Shot2" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 11.4699)
+
+[node name="shot2VCoolie" type="AnimatedSprite2D" parent="Shot2"]
+z_index = 2
+position = Vector2(197, 323)
+scale = Vector2(0.559559, 0.559559)
+sprite_frames = SubResource("SpriteFrames_567sh")
+
+[node name="Shot2Bg" type="Sprite2D" parent="Shot2"]
+material = SubResource("ShaderMaterial_t5l1k")
+position = Vector2(582.445, 321.25)
+scale = Vector2(0.611262, 0.611262)
+texture = ExtResource("7_gdwq0")
+
+[node name="Shaker Node" type="Node2D" parent="Shot2"]
+script = ExtResource("8_tccf1")
+
+[node name="IntroTitle" type="Sprite2D" parent="Shot2/Shaker Node"]
+position = Vector2(956, 305)
+scale = Vector2(0.894372, 0.894372)
+texture = ExtResource("9_ajdlv")
+
+[node name="FadeOverlay" type="ColorRect" parent="."]
+visible = false
+z_index = 5
+offset_left = -28.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = 23.0
+scale = Vector2(30.5667, 17.2182)
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(-40.265, 0)
+scale = Vector2(1.755, 1.755)
+transform = Transform2D(1.755, 0, 0, 1.755, -40.265, 0)
+
+[node name="PlayButton" type="Button" parent="CanvasLayer"]
+offset_left = 611.0
+offset_top = 417.0
+offset_right = 981.0
+offset_bottom = 603.0
+action_mode = 0
+icon = ExtResource("10_ktgd5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_hfo5s")
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_cih8f")
+volume_db = -13.514
+parameters/looping = false
+
+[connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]

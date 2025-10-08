@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuh67wrcckncl"]
+
+[ext_resource type="Script" uid="uid://bfhqhcvm6iwkj" path="res://scripts/test/TrolleyTest.gd" id="1_bp4li"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1ied"]
+size = Vector2(2000, 200)
+
+[node name="TrolleyTest" type="Node2D"]
+script = ExtResource("1_bp4li")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(960, 700)
+
+[node name="@CollisionShape2D@45655" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_d1ied")

@@ -28,6 +28,8 @@ var completion_ui_instance: Control = null
 var mobile_controls_instance: Control = null
 var event_display_instance: Control = null
 
+@onready var analytics = get_node("/root/AnalyticsManager")
+
 # Add these new variables to GameManager (around line 30-40)
 var current_delivery_destination_meters: float = 0.0
 
@@ -86,9 +88,34 @@ func _ready():
 	
 	_load_level_data()
 	
+		# Initialize analytics with user info
+	# These values should come from your React Native app ideally
+	analytics.set_user_info(
+		"66f5fa2a9a1d4b2e34a17c01",  # userId - get from your auth system
+		"grocery_delivery_game_id",   # gameId - unique for this game
+		"Player Name"                 # player name - get from profile
+	)
+	
+	# Add game-specific raw data
+	analytics.add_raw_data("gameVersion", "1.0.0")
+	analytics.add_raw_data("totalDeliveries", "0")
+	
 	# Connect to scene tree for handling scene changes (your existing code)
 	if get_tree():
 		get_tree().node_added.connect(_on_node_added)
+		
+		
+func some_critical_function():
+	analytics.track_executed_line("some_critical_function entered")
+	
+	# Wrap risky code in error check (simulate as Godot has limited try/catch)
+	var error_occurred = false
+	
+	# Your logic
+	# If error detected, call:
+	if error_occurred:
+		analytics.report_crash()
+		return	
 		
 func _process(delta: float):
 	"""
@@ -326,6 +353,9 @@ func start_level(level_number: int):
 	successful_deliveries_this_level = 0
 	current_state = GameState.PLAYING
 	
+		# Analytics: Start tracking this level
+	analytics.start_level("L" + str(level_number), true)  # true = faster time is better
+	
 	# Reset effort meters for new level
 	if GameConstants.is_feature_enabled(current_level, "effort_meters"):
 		var max_effort = GameConstants.LEVEL_CONFIG[current_level].max_effort
@@ -412,6 +442,9 @@ func _start_next_delivery():
 	var delivery_data = _get_delivery_data(current_level, current_delivery)
 	active_delivery = delivery_data
 	
+		# Store delivery start time for analytics
+	active_delivery["analytics_start_time"] = Time.get_ticks_msec() / 1000.0
+	
 	# Store the delivery destination for direction calculations
 	current_delivery_destination_meters = delivery_data.get("destination", 0.0)
 	
@@ -480,6 +513,37 @@ func complete_delivery(success: bool):
 		level_score += points
 		total_score += points
 		
+				# Analytics: Add this delivery as a task
+		var task_id = "D" + str(current_delivery)
+		var task_time = delivery_time if success else allotted_time
+		
+		# Build question and choices for analytics
+		var question = "Deliver trolley from %.0fm to %.0fm (%.0fm distance)" % [
+			active_delivery.get("trolley_pos", 0),
+			active_delivery.get("destination", 0),
+			abs(active_delivery.get("destination", 0) - active_delivery.get("trolley_pos", 0))
+		]
+		
+		var options = "Direction: %s, Handle: %s, Time: %.1fs" % [
+			active_delivery.get("direction", ""),
+			active_delivery.get("handle", ""),
+			allotted_time
+		]
+		
+		var correct_choice = "Complete within %.1fs" % allotted_time
+		var choice_made = "Completed in %.1fs" % task_time if success else "Failed/Timeout"
+		
+		analytics.add_task(
+			task_id,
+			success,
+			task_time,
+			points,
+			question,
+			options,
+			correct_choice,
+			choice_made
+		)
+			
 	# Clear delivery destination
 	current_delivery_destination_meters = 0.0
 	
@@ -505,6 +569,23 @@ func complete_delivery(success: bool):
 	timer.start()
 
 func complete_level():
+	
+		# Calculate level success (e.g., 60% deliveries successful)
+	var level_successful = successful_deliveries_this_level >= (GameConstants.GAME.deliveries_per_level * 0.6)
+	
+	# Analytics: Complete the level
+	analytics.complete_level(level_successful, level_score)
+	
+	# Update total deliveries in raw data
+	var total_deliveries = (current_level * GameConstants.GAME.deliveries_per_level)
+	for item in analytics.raw_data:
+		if item["key"] == "totalDeliveries":
+			item["value"] = str(total_deliveries)
+			break
+	
+	# Send analytics after each level (optional - you can also send only at game end)
+	analytics.send_analytics()
+	
 	current_state = GameState.LEVEL_COMPLETE
 	
 	# Announce the results to the UI
@@ -530,6 +611,9 @@ func complete_level():
 
 func end_game(completed: bool = false):
 	current_state = GameState.GAME_OVER
+		# Send final analytics payload
+	analytics.send_analytics()
+	
 	emit_signal("game_ended", total_score, completed)
 
 func pause_game():

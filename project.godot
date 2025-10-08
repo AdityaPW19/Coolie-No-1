@@ -21,6 +21,7 @@ GameManager="*res://scripts/autoload/GameManager.gd"
 GameConstants="*res://scripts/autoload/GameConstants.gd"
 InputManager="*res://scripts/autoload/InputManager.gd"
 AudioManager="*res://scene/game/audio_manager.tscn"
+AnalyticsManager="*res://scripts/autoload/AnalyticsManager.gd"
 
 [display]
 

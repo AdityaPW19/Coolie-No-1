@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=3 uid="uid://br1obcjhgux6r"]
+[gd_scene load_steps=160 format=3 uid="uid://br1obcjhgux6r"]
 
 [ext_resource type="Script" uid="uid://xebev8bm3gxu" path="res://scripts/game/LevelController.gd" id="1_nh83f"]
 [ext_resource type="Texture2D" uid="uid://ctb038ka5oup3" path="res://assets/sprites/tileset/Frame 99.png" id="2_rrs78"]
@@ -44,6 +44,7 @@
 [ext_resource type="FontFile" uid="uid://bh4thfhu2q30u" path="res://assets/fonts/Ticketing.otf" id="30_28o7x"]
 [ext_resource type="Texture2D" uid="uid://dilxklyx1hfaf" path="res://assets/buttons/PullButton.png" id="30_g0hfc"]
 [ext_resource type="Texture2D" uid="uid://d0ro3jgsnrfge" path="res://assets/buttons/player left.png" id="30_iwj7p"]
+[ext_resource type="Texture2D" uid="uid://l8r1gtrn03lh" path="res://assets/ui_assets/deliveryDisplayBoard.png" id="30_k05h7"]
 [ext_resource type="Script" uid="uid://44jleoxd5y5g" path="res://levels/mobile_buttons_control.gd" id="30_p16jf"]
 [ext_resource type="Texture2D" uid="uid://cj1bmvg3vel74" path="res://assets/ui_assets/empty station tv.png" id="31_g0hfc"]
 [ext_resource type="Texture2D" uid="uid://6peu4bbsugy2" path="res://assets/buttons/PushButton.png" id="31_y013r"]
@@ -75,7 +76,6 @@
 [ext_resource type="Texture2D" uid="uid://dhktiu34kdwo4" path="res://assets/station assets/Dustbin2.png" id="49_cqd8f"]
 [ext_resource type="Texture2D" uid="uid://di0mos5gngya" path="res://assets/station assets/luggage.png" id="51_uj5xs"]
 [ext_resource type="Texture2D" uid="uid://eeyv6opaxv0h" path="res://assets/station assets/TEA SHOP.png" id="52_erpwh"]
-[ext_resource type="Texture2D" uid="uid://bfgts12lid4ss" path="res://assets/ui_assets/board2.png" id="53_0h2ff"]
 [ext_resource type="Texture2D" uid="uid://cg26ydkt3idd4" path="res://assets/station assets/water cooler 2.png" id="53_5fju6"]
 [ext_resource type="Texture2D" uid="uid://br50vugc1vh1q" path="res://assets/station assets/image 145.png" id="54_qv563"]
 [ext_resource type="Texture2D" uid="uid://bj8el8t1aq4w2" path="res://assets/station assets/VADAPAV KI DUKAAN.png" id="54_w6dqi"]
@@ -1229,18 +1229,6 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnqjb"]
-bg_color = Color(0.4, 0.2, 0.6, 0.9)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.8, 0.6, 1, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_v5ii7"]
 atlas = ExtResource("72_vyfbf")
 region = Rect2(0, 0, 266, 233)
@@ -1518,7 +1506,6 @@ grow_vertical = 2
 scale = Vector2(1, 0.988947)
 mouse_filter = 2
 script = "res://scripts/ui/GameUI.gd"
-metadata/_edit_use_anchors_ = true
 
 [node name="TrolleyInfoPanel" type="Panel" parent="UI/GameUI"]
 visible = false
@@ -1691,11 +1678,15 @@ scale = Vector2(0.301897, 0.301897)
 texture = ExtResource("22_tsvh7")
 
 [node name="Timer" type="TextureRect" parent="UI/GameUI"]
-layout_mode = 0
-offset_left = 846.0
-offset_top = -74.8271
-offset_right = 1137.0
-offset_bottom = 175.173
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.0
+offset_top = -68.76
+offset_right = 176.0
+offset_bottom = 181.24
+grow_horizontal = 2
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("29_ccmhd")
 
@@ -1713,10 +1704,10 @@ text = "Time: 00:22"
 horizontal_alignment = 1
 
 [node name="ScorePanel" type="TextureRect" parent="UI/GameUI"]
-layout_mode = 0
-offset_left = 31.0
+layout_mode = 1
+offset_left = 27.0
 offset_top = -2.02235
-offset_right = 1523.0
+offset_right = 1519.0
 offset_bottom = 1235.98
 scale = Vector2(0.157564, 0.157564)
 texture = ExtResource("31_g0hfc")
@@ -1747,24 +1738,24 @@ text = "00"
 horizontal_alignment = 1
 
 [node name="ObjectivePanel" type="TextureRect" parent="UI/GameUI"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 932.305
-offset_right = 2056.0
-offset_bottom = 2269.3
+layout_mode = 1
+offset_left = 13.0
+offset_top = 921.182
+offset_right = 2054.0
+offset_bottom = 2258.18
 scale = Vector2(0.118157, 0.118157)
-texture = ExtResource("53_0h2ff")
+texture = ExtResource("30_k05h7")
 
 [node name="ObjectiveText" type="Label" parent="UI/GameUI/ObjectivePanel"]
 layout_mode = 0
-offset_left = 177.73
-offset_top = 479.241
-offset_right = 427.73
-offset_bottom = 579.241
+offset_left = 186.193
+offset_top = 222.505
+offset_right = 436.193
+offset_bottom = 349.175
 scale = Vector2(6.70441, 6.70441)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("30_28o7x")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 text = "🎯 OBJECTIVE"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1775,18 +1766,23 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -58.6482
-offset_bottom = -58.6483
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("38_3d31m")
 
 [node name="PullMeter" type="Control" parent="UI/GameUI/Meters"]
-anchors_preset = 0
-offset_left = 1821.0
-offset_top = 536.935
-offset_right = 1861.0
-offset_bottom = 576.935
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = 1.99072
+offset_right = -70.0
+offset_bottom = 41.9907
+grow_horizontal = 0
+grow_vertical = 2
 
 [node name="barBg" type="TextureRect" parent="UI/GameUI/Meters/PullMeter"]
 layout_mode = 0
@@ -1891,11 +1887,15 @@ horizontal_alignment = 1
 uppercase = true
 
 [node name="PushMeter" type="Control" parent="UI/GameUI/Meters"]
-anchors_preset = 0
-offset_left = 77.0
-offset_top = 536.935
-offset_right = 117.0
-offset_bottom = 576.935
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 86.0
+offset_top = 0.979492
+offset_right = 126.0
+offset_bottom = 40.9795
+grow_vertical = 2
 
 [node name="barBg" type="TextureRect" parent="UI/GameUI/Meters/PushMeter"]
 layout_mode = 0
@@ -2000,11 +2000,15 @@ horizontal_alignment = 1
 uppercase = true
 
 [node name="PauseButton" type="TextureButton" parent="UI/GameUI"]
-layout_mode = 0
-offset_left = 1779.0
-offset_top = -15.1676
-offset_right = 1939.0
-offset_bottom = 144.832
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_top = -11.1229
+offset_right = 20.0
+offset_bottom = 148.877
+grow_horizontal = 0
 scale = Vector2(0.533482, 0.533482)
 pivot_offset = Vector2(79, 78.8718)
 texture_normal = ExtResource("27_0h2ff")
@@ -2024,18 +2028,28 @@ flying_star_texture = ExtResource("24_o6p3w")
 filled_star_texture = ExtResource("25_8v346")
 
 [node name="_ColorRect_5" type="ColorRect" parent="UI/CompletionUI"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.7)
 
 [node name="CompletionContainer" type="TextureRect" parent="UI/CompletionUI"]
-layout_mode = 0
-offset_left = 606.0
-offset_top = -15.0
-offset_right = 1344.0
-offset_bottom = 1153.0
-scale = Vector2(0.85579, 0.71471)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -572.0
+offset_right = 388.0
+offset_bottom = 627.55
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.724055, 0.724055)
 pivot_offset = Vector2(380.623, 575.515)
 texture = ExtResource("55_4vupy")
 
@@ -2055,7 +2069,6 @@ offset_left = -80.6273
 offset_top = -13.9917
 offset_right = 441.373
 offset_bottom = 448.008
-scale = Vector2(0.930611, 1.16326)
 pivot_offset = Vector2(274.985, 221.314)
 texture = ExtResource("60_08alk")
 
@@ -2066,7 +2079,6 @@ offset_left = -80.6273
 offset_top = -13.9917
 offset_right = 441.373
 offset_bottom = 448.008
-scale = Vector2(0.930611, 1.16326)
 pivot_offset = Vector2(274.985, 221.314)
 texture = ExtResource("61_k05h7")
 
@@ -2077,16 +2089,15 @@ offset_left = -80.6273
 offset_top = -23.7858
 offset_right = 441.373
 offset_bottom = 438.214
-scale = Vector2(0.930611, 1.16326)
 pivot_offset = Vector2(274.985, 221.314)
 texture = ExtResource("62_0kkto")
 
 [node name="Levelbanner" type="TextureRect" parent="UI/CompletionUI/CompletionContainer"]
 layout_mode = 0
-offset_left = 52.7119
-offset_top = 48.7069
-offset_right = 669.712
-offset_bottom = 240.707
+offset_left = 62.1073
+offset_top = 66.5552
+offset_right = 679.107
+offset_bottom = 258.555
 scale = Vector2(2.02185, 2.49461)
 pivot_offset = Vector2(311.625, 59.2614)
 mouse_filter = 2
@@ -2095,9 +2106,9 @@ stretch_mode = 2
 
 [node name="TitleLabel" type="Label" parent="UI/CompletionUI/CompletionContainer/Levelbanner"]
 layout_mode = 2
-offset_left = 120.904
+offset_left = 113.644
 offset_top = 29.3359
-offset_right = 513.904
+offset_right = 506.644
 offset_bottom = 94.3359
 scale = Vector2(0.990864, 0.990864)
 theme_override_colors/font_color = Color(1, 1, 0.529412, 1)
@@ -2152,27 +2163,27 @@ texture = ExtResource("25_s1j6p")
 [node name="ButtonsContainer" type="Control" parent="UI/CompletionUI/CompletionContainer"]
 anchors_preset = 0
 offset_left = 108.8
-offset_top = 905.612
+offset_top = 928.784
 offset_right = 708.8
-offset_bottom = 1105.61
+offset_bottom = 1128.78
 scale = Vector2(0.855329, 0.855329)
 
 [node name="Retry" type="TextureButton" parent="UI/CompletionUI/CompletionContainer/ButtonsContainer"]
 layout_mode = 0
 offset_left = -47.9089
-offset_top = 23.7858
+offset_top = 35.037
 offset_right = 148.091
-offset_bottom = 227.786
-scale = Vector2(0.832973, 0.832973)
+offset_bottom = 239.037
+scale = Vector2(0.726504, 0.726504)
 texture_normal = ExtResource("56_eflt5")
 
 [node name="Next" type="TextureButton" parent="UI/CompletionUI/CompletionContainer/ButtonsContainer"]
 layout_mode = 0
-offset_left = 136.716
-offset_top = 43.374
-offset_right = 808.716
-offset_bottom = 265.374
-scale = Vector2(0.488022, 0.583863)
+offset_left = 116.569
+offset_top = 52.7988
+offset_right = 788.569
+offset_bottom = 274.799
+scale = Vector2(0.536454, 0.536454)
 texture_normal = ExtResource("57_08alk")
 stretch_mode = 3
 
@@ -2197,19 +2208,19 @@ vertical_alignment = 1
 
 [node name="Exit" type="TextureButton" parent="UI/CompletionUI/CompletionContainer/ButtonsContainer"]
 layout_mode = 0
-offset_left = 474.415
-offset_top = 20.9875
-offset_right = 670.416
-offset_bottom = 224.987
-scale = Vector2(0.833, 0.833)
+offset_left = 505.715
+offset_top = 33.4223
+offset_right = 701.716
+offset_bottom = 237.422
+scale = Vector2(0.727, 0.727)
 texture_normal = ExtResource("58_vgq6s")
 
 [node name="ScoreBg" type="TextureRect" parent="UI/CompletionUI/CompletionContainer"]
 layout_mode = 0
 offset_left = 125.16
-offset_top = 802.073
+offset_top = 822.022
 offset_right = 674.159
-offset_bottom = 924.073
+offset_bottom = 944.022
 scale = Vector2(0.893974, 0.893974)
 texture = ExtResource("59_vgq6s")
 
@@ -2219,7 +2230,7 @@ offset_left = 438.192
 offset_top = 24.6992
 offset_right = 508.192
 offset_bottom = 89.6992
-scale = Vector2(1, 1.24048)
+scale = Vector2(1.2265, 1.2265)
 pivot_offset = Vector2(18.6962, 27.0702)
 theme_override_colors/font_color = Color(0, 0.596078, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -2234,11 +2245,11 @@ vertical_alignment = 1
 
 [node name="Score" type="Label" parent="UI/CompletionUI/CompletionContainer/ScoreBg"]
 layout_mode = 2
-offset_left = 72.4477
+offset_left = 51.5172
 offset_top = 24.6992
-offset_right = 330.448
+offset_right = 309.518
 offset_bottom = 89.6992
-scale = Vector2(1, 1.24048)
+scale = Vector2(1.2265, 1.2265)
 pivot_offset = Vector2(18.6962, 27.0702)
 theme_override_colors/font_color = Color(0, 0.596078, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -2516,39 +2527,15 @@ text = "👆"
 horizontal_alignment = 1
 
 [node name="HintSystem" type="Control" parent="UI/EventDisplayUI"]
-anchors_preset = 0
-offset_left = 1600.0
-offset_top = 910.0
-offset_right = 1900.0
-offset_bottom = 1060.0
-
-[node name="hint_panel" type="Panel" parent="UI/EventDisplayUI/HintSystem"]
-visible = false
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 150.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_dnqjb")
-
-[node name="HintContainer" type="VBoxContainer" parent="UI/EventDisplayUI/HintSystem/hint_panel"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 285.0
-offset_bottom = 135.0
-
-[node name="HintTitle" type="Label" parent="UI/EventDisplayUI/HintSystem/hint_panel/HintContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.9, 0.7, 1, 1)
-theme_override_font_sizes/font_size = 14
-text = "💡 Physics Hint"
-horizontal_alignment = 1
-
-[node name="HintText" type="Label" parent="UI/EventDisplayUI/HintSystem/hint_panel/HintContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
-theme_override_font_sizes/font_size = 12
-text = "Try different actions to learn physics concepts!"
-autowrap_mode = 3
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -321.0
+offset_top = 915.0
+offset_right = -21.0
+offset_bottom = 1065.0
+grow_horizontal = 0
 
 [node name="HintButton" type="Button" parent="UI/EventDisplayUI/HintSystem"]
 layout_mode = 0
@@ -2711,31 +2698,46 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.7)
 
 [node name="Container" type="TextureRect" parent="UI/PauseMenu"]
-layout_mode = 0
-offset_left = 767.0
-offset_top = 253.0
-offset_right = 1136.0
-offset_bottom = 837.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -282.0
+offset_right = 175.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(1.71311, 1.56916)
 pivot_offset = Vector2(180.185, 279.719)
 texture = ExtResource("55_4vupy")
 
 [node name="HowToButton" type="TextureButton" parent="UI/PauseMenu"]
-layout_mode = 0
-offset_left = 1778.0
-offset_top = 50.0
-offset_right = 1898.0
-offset_bottom = 170.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 54.0
+offset_right = -51.0
+offset_bottom = 174.0
+grow_horizontal = 0
 scale = Vector2(1.03504, 1.03504)
 pivot_offset = Vector2(52.0858, 47.7279)
 texture_normal = ExtResource("67_k05h7")
 
 [node name="Banner" type="TextureRect" parent="UI/PauseMenu"]
-layout_mode = 0
-offset_left = 329.0
-offset_top = 132.0
-offset_right = 1549.0
-offset_bottom = 516.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -627.0
+offset_top = 135.0
+offset_right = 593.0
+offset_bottom = 519.0
+grow_horizontal = 2
 scale = Vector2(0.901655, 1.02971)
 pivot_offset = Vector2(647.34, 136.48)
 mouse_filter = 2
@@ -2870,68 +2872,105 @@ DEBUG_MOBILE_SHOW_CONTROLS = true
 
 [node name="WalkLeft" type="TextureButton" parent="UI/MobileControls"]
 z_index = 1
-layout_mode = 0
-offset_left = -122.0
-offset_top = 627.699
-offset_right = 318.0
-offset_bottom = 1067.7
-scale = Vector2(0.515151, 0.515151)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -108.547
+offset_top = -494.192
+offset_right = 331.453
+offset_bottom = -54.1909
+grow_vertical = 0
+scale = Vector2(0.575, 0.575)
 pivot_offset = Vector2(225.94, 217.184)
 mouse_filter = 1
 texture_normal = ExtResource("30_iwj7p")
 
+[node name="PushButton" type="TextureButton" parent="UI/MobileControls"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -203.547
+offset_top = -602.191
+offset_right = 421.453
+offset_bottom = 24.8132
+grow_vertical = 0
+scale = Vector2(0.408274, 0.408274)
+pivot_offset = Vector2(325, 325)
+mouse_filter = 1
+texture_normal = ExtResource("31_y013r")
+
 [node name="WalkRight" type="TextureButton" parent="UI/MobileControls"]
 z_index = 1
-layout_mode = 0
-offset_left = 1614.0
-offset_top = 632.755
-offset_right = 2054.0
-offset_bottom = 1072.76
-scale = Vector2(0.515151, 0.515151)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -334.147
+offset_top = -492.704
+offset_right = 105.853
+offset_bottom = -52.699
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.575, 0.575)
 pivot_offset = Vector2(217.572, 214.364)
 mouse_filter = 1
 texture_normal = ExtResource("30_1jgyh")
 
 [node name="PullButton" type="TextureButton" parent="UI/MobileControls"]
-layout_mode = 0
-offset_left = 1518.0
-offset_top = 531.879
-offset_right = 2143.0
-offset_bottom = 1158.88
-scale = Vector2(0.358502, 0.358502)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -432.147
+offset_top = -594.704
+offset_right = 192.853
+offset_bottom = 32.297
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.408, 0.408)
 pivot_offset = Vector2(312, 312)
 mouse_filter = 1
 texture_normal = ExtResource("30_g0hfc")
 
-[node name="PushButton" type="TextureButton" parent="UI/MobileControls"]
-layout_mode = 0
-offset_left = -217.0
-offset_top = 520.756
-offset_right = 408.0
-offset_bottom = 1147.76
-scale = Vector2(0.358502, 0.358502)
-pivot_offset = Vector2(325, 325)
-mouse_filter = 1
-texture_normal = ExtResource("31_y013r")
-
 [node name="TrolleyEquipButton" type="TextureButton" parent="UI/MobileControls"]
 z_index = 4
-layout_mode = 0
-offset_left = 1708.28
-offset_top = 866.213
-offset_right = 1954.28
-offset_bottom = 1112.21
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -243.725
+offset_top = -223.787
+offset_right = 2.27502
+offset_bottom = 22.213
+grow_horizontal = 0
+grow_vertical = 0
 scale = Vector2(0.422818, 0.422818)
 pivot_offset = Vector2(126, 124.375)
 texture_normal = ExtResource("32_y013r")
 
 [node name="TrolleyFlipButton" type="TextureButton" parent="UI/MobileControls"]
+visible = false
 z_index = 4
-layout_mode = 0
-offset_left = 1708.28
-offset_top = 866.213
-offset_right = 1954.28
-offset_bottom = 1112.21
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -243.725
+offset_top = -223.787
+offset_right = 2.27502
+offset_bottom = 22.213
+grow_horizontal = 0
+grow_vertical = 0
 scale = Vector2(0.422818, 0.422818)
 pivot_offset = Vector2(126, 124.375)
 texture_normal = ExtResource("37_kraf8")
@@ -2941,9 +2980,11 @@ process_mode = 3
 visible = false
 z_index = 2
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("72_0004t")
 
@@ -2970,21 +3011,24 @@ scale = Vector2(0.807412, 0.807412)
 pivot_offset = Vector2(757.241, 655.172)
 texture = ExtResource("71_sxyno")
 
-[node name="TextureRect2" type="TextureRect" parent="UI/HowToPlay"]
+[node name="BackgroundDisplay" type="TextureRect" parent="UI/HowToPlay"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = -466.0
-offset_top = 206.0
+offset_top = -338.0
 offset_right = 552.0
-offset_bottom = 912.0
+offset_bottom = 368.0
 grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(1.172, 1.17)
 pivot_offset = Vector2(757.241, 655.172)
 texture = ExtResource("73_j2dth")
 
-[node name="Stamp" type="TextureRect" parent="UI/HowToPlay/TextureRect2"]
+[node name="Stamp" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay"]
 layout_mode = 0
 offset_left = 259.732
 offset_top = 26.8788
@@ -2993,7 +3037,7 @@ offset_bottom = 255.879
 scale = Vector2(0.335312, 0.335312)
 texture = ExtResource("77_ea86g")
 
-[node name="Stamp2" type="TextureRect" parent="UI/HowToPlay/TextureRect2"]
+[node name="Stamp2" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay"]
 layout_mode = 0
 offset_left = 681.971
 offset_top = 26.8788
@@ -3002,32 +3046,81 @@ offset_bottom = 255.879
 scale = Vector2(0.335312, 0.335312)
 texture = ExtResource("77_ea86g")
 
-[node name="CloseButton" type="TextureButton" parent="UI/HowToPlay"]
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/HowToPlay/BackgroundDisplay"]
 layout_mode = 0
-offset_left = 1474.0
-offset_top = 103.0
-offset_right = 1730.0
-offset_bottom = 359.0
+offset_left = 26.4057
+offset_top = 163.572
+offset_right = 976.404
+offset_bottom = 693.572
+scale = Vector2(1.02014, 1.02014)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/HowToPlay/BackgroundDisplay/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+
+[node name="Slide1" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("78_00ykv")
+stretch_mode = 5
+
+[node name="Slide2" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("79_0goej")
+stretch_mode = 5
+
+[node name="Slide3" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("79_t6et5")
+stretch_mode = 5
+
+[node name="Slide4" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("79_2gols")
+stretch_mode = 5
+
+[node name="Slide5" type="TextureRect" parent="UI/HowToPlay/BackgroundDisplay/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("80_0goej")
+stretch_mode = 5
+
+[node name="CloseButton" type="TextureButton" parent="UI/HowToPlay/BackgroundDisplay"]
+layout_mode = 0
+offset_left = 917.445
+offset_top = 6.30702
+offset_right = 1173.44
+offset_bottom = 262.307
 scale = Vector2(0.511226, 0.511226)
 pivot_offset = Vector2(125.163, 120.469)
 texture_normal = ExtResource("73_v3pf6")
 flip_h = true
 
-[node name="RightButton" type="TextureButton" parent="UI/HowToPlay"]
-layout_mode = 0
-offset_left = 1602.0
-offset_top = 488.0
-offset_right = 1790.0
-offset_bottom = 770.0
+[node name="RightButton" type="TextureButton" parent="UI/HowToPlay/BackgroundDisplay"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 29.991
+offset_top = -40.7101
+offset_right = 217.991
+offset_bottom = 241.29
+grow_horizontal = 0
+grow_vertical = 2
 scale = Vector2(0.643874, 0.643874)
 texture_normal = ExtResource("82_0kkto")
 
-[node name="LeftButton" type="TextureButton" parent="UI/HowToPlay"]
-layout_mode = 0
-offset_left = 207.0
-offset_top = 488.0
-offset_right = 395.0
-offset_bottom = 770.0
+[node name="LeftButton" type="TextureButton" parent="UI/HowToPlay/BackgroundDisplay"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -149.108
+offset_top = -26.1801
+offset_right = 38.8921
+offset_bottom = 255.82
+grow_vertical = 2
 scale = Vector2(0.643874, 0.643874)
 texture_normal = ExtResource("82_0kkto")
 flip_h = true
@@ -3067,54 +3160,16 @@ Deliver luggage to marked points quickly and correctly.
 Learn Push & Pull forces while playing!"
 vertical_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI/HowToPlay"]
-layout_mode = 0
-offset_left = 394.702
-offset_top = 285.0
-offset_right = 1344.7
-offset_bottom = 815.0
-scale = Vector2(1.19211, 1.19211)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/HowToPlay/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 50
-
-[node name="Slide1" type="TextureRect" parent="UI/HowToPlay/ScrollContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("78_00ykv")
-stretch_mode = 5
-
-[node name="Slide2" type="TextureRect" parent="UI/HowToPlay/ScrollContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("79_0goej")
-stretch_mode = 5
-
-[node name="Slide3" type="TextureRect" parent="UI/HowToPlay/ScrollContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("79_t6et5")
-stretch_mode = 5
-
-[node name="Slide4" type="TextureRect" parent="UI/HowToPlay/ScrollContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("79_2gols")
-stretch_mode = 5
-
-[node name="Slide5" type="TextureRect" parent="UI/HowToPlay/ScrollContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("80_0goej")
-stretch_mode = 5
-
 [node name="TitleContainer" type="Control" parent="UI/HowToPlay"]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -205.0
-offset_top = 123.0
-offset_right = 193.0
-offset_bottom = 223.0
+offset_left = -199.0
+offset_top = 118.0
+offset_right = 199.0
+offset_bottom = 218.0
 grow_horizontal = 2
 
 [node name="Text" type="Label" parent="UI/HowToPlay/TitleContainer"]
@@ -3145,6 +3200,11 @@ motion_mirroring = Vector2(1800, 0)
 
 [node name="Sky2" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer"]
 position = Vector2(959.667, 542)
+scale = Vector2(1.98889, 1.98889)
+texture = ExtResource("11_ftwxw")
+
+[node name="Sky3" type="Sprite2D" parent="ParallaxBackgroundBack/ParallaxLayer"]
+position = Vector2(4643.18, 542)
 scale = Vector2(1.98889, 1.98889)
 texture = ExtResource("11_ftwxw")
 
@@ -3451,332 +3511,6 @@ frame_progress = 0.653839
 flip_h = true
 
 [node name="AnouncementAudio" type="AudioStreamPlayer2D" parent="ParallaxBackgroundBack/ParallaxLayer4"]
-position = Vector2(1986.36, 711.364)
-scale = Vector2(0.132235, 0.132235)
-stream = ExtResource("95_in0j8")
-volume_db = -1.0
-max_distance = 4000.0
-attenuation = 2.73208
-
-[node name="ParallaxBackgroundBack2" type="ParallaxBackground" parent="."]
-layer = -1
-offset = Vector2(0, 200)
-scale = Vector2(0.44, 0.44)
-transform = Transform2D(0.44, 0, 0, 0.44, 0, 200)
-follow_viewport_scale = 0.001
-script = ExtResource("67_vcsfo")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-motion_mirroring = Vector2(1800, 0)
-
-[node name="Sky2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer"]
-position = Vector2(959.667, 542)
-scale = Vector2(1.98889, 1.98889)
-texture = ExtResource("11_ftwxw")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-position = Vector2(0, -243.182)
-motion_mirroring = Vector2(1200, 0)
-
-[node name="Clouds21" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer2"]
-position = Vector2(488.636, 568.182)
-scale = Vector2(1.54545, 1.54545)
-texture = ExtResource("12_j8ml4")
-
-[node name="Clouds31" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer2"]
-position = Vector2(1011.36, 579.545)
-texture = ExtResource("13_rm2h2")
-
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-modulate = Color(0.941948, 0.941948, 0.941948, 1)
-position = Vector2(0, -243.182)
-motion_mirroring = Vector2(1700, 0)
-
-[node name="Bird" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer6"]
-visible = false
-position = Vector2(127.273, 483.203)
-scale = Vector2(0.40914, 0.40914)
-texture = ExtResource("71_1un6n")
-
-[node name="Bird3" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer6"]
-visible = false
-position = Vector2(709.091, 442.294)
-scale = Vector2(0.40914, 0.40914)
-texture = ExtResource("71_1un6n")
-
-[node name="Bird2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer6"]
-visible = false
-position = Vector2(418.182, 528.658)
-scale = Vector2(0.59175, 0.59175)
-texture = ExtResource("71_1un6n")
-
-[node name="AnimatedBird" type="AnimatedSprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer6"]
-position = Vector2(122.53, 452.134)
-scale = Vector2(0.179637, 0.179637)
-sprite_frames = SubResource("SpriteFrames_c7wew")
-animation = &"flying"
-
-[node name="AnimatedBird2" type="AnimatedSprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer6"]
-position = Vector2(438.636, 565.909)
-scale = Vector2(0.179637, 0.179637)
-sprite_frames = SubResource("SpriteFrames_c7wew")
-animation = &"flying"
-
-[node name="AnimatedBird3" type="AnimatedSprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer6"]
-position = Vector2(840.909, 452.273)
-scale = Vector2(0.179637, 0.179637)
-sprite_frames = SubResource("SpriteFrames_c7wew")
-animation = &"flying"
-
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-position = Vector2(4.545, -74.852)
-motion_scale = Vector2(1.2, 1.2)
-motion_mirroring = Vector2(3300, 0)
-
-[node name="Building" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer5"]
-visible = false
-position = Vector2(1577.27, 695.455)
-scale = Vector2(0.796933, 0.796933)
-texture = ExtResource("30_3lerx")
-
-[node name="Buildings_0_75x" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer5"]
-position = Vector2(1575, 690.761)
-scale = Vector2(1.05858, 1.04996)
-texture = ExtResource("78_sxyno")
-
-[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-visible = false
-position = Vector2(343.182, 254.545)
-scale = Vector2(1.25344, 1.25344)
-motion_scale = Vector2(1.4, 1.4)
-motion_mirroring = Vector2(5550, 0)
-
-[node name="IndianElectricPoles" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer7"]
-position = Vector2(723.461, 398.901)
-scale = Vector2(0.33554, 0.33554)
-texture = ExtResource("75_d2pg5")
-
-[node name="IndianElectricPoles2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer7"]
-position = Vector2(2371.65, 398.901)
-scale = Vector2(0.33554, 0.33554)
-texture = ExtResource("75_d2pg5")
-
-[node name="IndianElectricPoles3" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer7"]
-position = Vector2(3999.9, 398.901)
-scale = Vector2(0.33554, 0.33554)
-texture = ExtResource("75_d2pg5")
-
-[node name="IndianElectricPoles4" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer7"]
-position = Vector2(5648.09, 398.901)
-scale = Vector2(0.33554, 0.33554)
-texture = ExtResource("75_d2pg5")
-
-[node name="IndianElectricPoles5" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer7"]
-position = Vector2(7292.66, 398.901)
-scale = Vector2(0.33554, 0.33554)
-texture = ExtResource("75_d2pg5")
-
-[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-physics_interpolation_mode = 0
-position = Vector2(343.182, 254.545)
-scale = Vector2(1.25344, 1.25344)
-motion_scale = Vector2(1.4, 1.4)
-motion_mirroring = Vector2(3920, 0)
-
-[node name="IndianElectricPoles_0_5x" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer8"]
-position = Vector2(727.09, 398.903)
-scale = Vector2(0.67485, 0.67485)
-texture = ExtResource("80_d1wo2")
-
-[node name="IndianElectricPoles_0_5x2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer8"]
-position = Vector2(2360.78, 398.903)
-scale = Vector2(0.67485, 0.67485)
-texture = ExtResource("80_d1wo2")
-
-[node name="IndianElectricPoles_0_5x3" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer8"]
-position = Vector2(3994.46, 398.903)
-scale = Vector2(0.67485, 0.67485)
-texture = ExtResource("80_d1wo2")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-position = Vector2(-1206.82, 995.455)
-scale = Vector2(1.72728, 1.72728)
-motion_scale = Vector2(1.3, 1.3)
-
-[node name="GroupTrain" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer3"]
-visible = false
-position = Vector2(329, 594)
-texture = ExtResource("14_p2img")
-
-[node name="Cartoontrain" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer3"]
-position = Vector2(849.998, -55.2629)
-scale = Vector2(1.1585, 1.15728)
-texture = ExtResource("15_8uof6")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ParallaxBackgroundBack2/ParallaxLayer3/Cartoontrain"]
-position = Vector2(239.646, -1.13724)
-stream = ExtResource("78_03w5d")
-volume_db = -6.0
-max_distance = 4500.0
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackgroundBack2"]
-position = Vector2(0, 106.818)
-motion_scale = Vector2(1.8, 1.8)
-motion_mirroring = Vector2(4000, 0)
-
-[node name="Image-photoroom" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-visible = false
-position = Vector2(468.182, 1386.36)
-scale = Vector2(2.04618, 2.04618)
-texture = ExtResource("37_rstgt")
-
-[node name="RailwayStationHD" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-visible = false
-position = Vector2(2079.55, 790.908)
-scale = Vector2(0.512882, 0.512882)
-texture = ExtResource("32_i8s3y")
-
-[node name="Hq720" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4/RailwayStationHD"]
-position = Vector2(2508.1, -79.7619)
-scale = Vector2(0.337205, 0.337205)
-texture = ExtResource("81_in0j8")
-
-[node name="RailwayStationSD" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(2079.55, 790.908)
-scale = Vector2(1.37, 1.37)
-texture = ExtResource("85_vnnrk")
-
-[node name="Hq720" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4/RailwayStationSD"]
-position = Vector2(938.948, -31.5186)
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("86_sxyno")
-
-[node name="Bookstall" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(1300, 913.637)
-scale = Vector2(0.639, 0.639)
-texture = ExtResource("48_n3ctf")
-
-[node name="Dustbin2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(1025, 977.273)
-texture = ExtResource("49_cqd8f")
-
-[node name="seat" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(495.455, 965.909)
-scale = Vector2(0.861078, 0.861078)
-texture = ExtResource("54_qv563")
-
-[node name="seat2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(2670.45, 963.637)
-scale = Vector2(0.861078, 0.861078)
-texture = ExtResource("54_qv563")
-
-[node name="seat3" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(3525, 963.637)
-scale = Vector2(0.861078, 0.861078)
-texture = ExtResource("54_qv563")
-
-[node name="Luggage" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(547.727, 947.727)
-scale = Vector2(0.215271, 0.215271)
-texture = ExtResource("51_uj5xs")
-
-[node name="TeaShop" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(2213.64, 927.273)
-scale = Vector2(0.556224, 0.556224)
-texture = ExtResource("52_erpwh")
-
-[node name="WaterCooler2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(1847.73, 922.727)
-texture = ExtResource("53_5fju6")
-
-[node name="VadapavKiDukaan" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(3102.27, 922.727)
-scale = Vector2(0.496151, 0.496151)
-texture = ExtResource("54_w6dqi")
-
-[node name="Auntybeta" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(104.545, 940.909)
-scale = Vector2(0.529572, 0.529572)
-texture = ExtResource("55_2i2m2")
-
-[node name="Luggage2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(11.3636, 968.182)
-scale = Vector2(0.620247, 0.620247)
-texture = ExtResource("56_ptj23")
-
-[node name="FamilySitting" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(825, 952.273)
-scale = Vector2(0.84267, 0.84267)
-texture = ExtResource("57_2c7y2")
-
-[node name="Pigeon" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(286.364, 610.506)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-
-[node name="Pigeon2" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(361.364, 610.506)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-
-[node name="Pigeon3" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(663.636, 610.506)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-flip_h = true
-
-[node name="Pigeon4" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(1504.55, 610.506)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-
-[node name="Pigeon5" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(1727.27, 472.727)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-flip_h = true
-
-[node name="Pigeon6" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(2525, 609.091)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-flip_h = true
-
-[node name="Pigeon7" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(2556.82, 609.091)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-flip_h = true
-
-[node name="Pigeon8" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(3086.36, 609.091)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-
-[node name="Pigeon9" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(3345.45, 665.909)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-
-[node name="Pigeon10" type="Sprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(3550, 609.091)
-scale = Vector2(0.587, 0.587)
-texture = ExtResource("90_6luff")
-flip_h = true
-
-[node name="AnouncementSpeaker2" type="AnimatedSprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(2031.82, 711.364)
-scale = Vector2(0.132235, 0.132235)
-sprite_frames = SubResource("SpriteFrames_in0j8")
-
-[node name="AnouncementSpeaker1" type="AnimatedSprite2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
-position = Vector2(1936.36, 711.364)
-scale = Vector2(0.132235, 0.132235)
-sprite_frames = SubResource("SpriteFrames_0h2ff")
-frame_progress = 0.653839
-flip_h = true
-
-[node name="AnouncementAudio" type="AudioStreamPlayer2D" parent="ParallaxBackgroundBack2/ParallaxLayer4"]
 position = Vector2(1986.36, 711.364)
 scale = Vector2(0.132235, 0.132235)
 stream = ExtResource("95_in0j8")

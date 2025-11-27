@@ -1,20 +1,20 @@
 extends Control
 
 # --- Node References ---
-@onready var scroll_container: ScrollContainer = $ScrollContainer
-@onready var hbox_container: HBoxContainer = $ScrollContainer/HBoxContainer
+@onready var scroll_container: ScrollContainer = $BackgroundDisplay/ScrollContainer
+@onready var hbox_container: HBoxContainer = $BackgroundDisplay/ScrollContainer/HBoxContainer
 @onready var title_container: Control = $TitleContainer
 @onready var title_label: Label = $TitleContainer/Text
-@onready var left_button: TextureButton = $LeftButton
-@onready var right_button: TextureButton = $RightButton
-@onready var close_button: TextureButton = $CloseButton
+@onready var left_button: TextureButton = $BackgroundDisplay/LeftButton
+@onready var right_button: TextureButton = $BackgroundDisplay/RightButton
+@onready var close_button: TextureButton = $BackgroundDisplay/CloseButton
 
 # Get all slide TextureRects
-@onready var slide_1: TextureRect = $ScrollContainer/HBoxContainer/Slide1
-@onready var slide_2: TextureRect = $ScrollContainer/HBoxContainer/Slide2
-@onready var slide_3: TextureRect = $ScrollContainer/HBoxContainer/Slide3
-@onready var slide_4: TextureRect = $ScrollContainer/HBoxContainer/Slide4
-@onready var slide_5: TextureRect = $ScrollContainer/HBoxContainer/Slide5
+@onready var slide_1: TextureRect = $BackgroundDisplay/ScrollContainer/HBoxContainer/Slide1
+@onready var slide_2: TextureRect = $BackgroundDisplay/ScrollContainer/HBoxContainer/Slide2
+@onready var slide_3: TextureRect = $BackgroundDisplay/ScrollContainer/HBoxContainer/Slide3
+@onready var slide_4: TextureRect = $BackgroundDisplay/ScrollContainer/HBoxContainer/Slide4
+@onready var slide_5: TextureRect = $BackgroundDisplay/ScrollContainer/HBoxContainer/Slide5
 
 # --- Variables ---
 var current_slide_index: int = 0

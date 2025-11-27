@@ -357,7 +357,7 @@ libraries = {
 
 [node name="Shot1Bg" type="Sprite2D" parent="Shot1"]
 position = Vector2(582.445, 321.25)
-scale = Vector2(0.824074, 0.824074)
+scale = Vector2(1.104, 1.104)
 texture = ExtResource("3_qf8jl")
 
 [node name="shot1Coolie" type="AnimatedSprite2D" parent="Shot1"]
@@ -394,28 +394,34 @@ texture = ExtResource("9_ajdlv")
 [node name="FadeOverlay" type="ColorRect" parent="."]
 visible = false
 z_index = 5
-offset_left = -28.0
-offset_top = -17.0
-offset_right = 12.0
-offset_bottom = 23.0
-scale = Vector2(30.5667, 17.2182)
+offset_left = -444.308
+offset_top = -220.946
+offset_right = -404.308
+offset_bottom = -180.946
+scale = Vector2(59.8751, 33.7276)
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-offset = Vector2(-40.265, 0)
 scale = Vector2(1.755, 1.755)
-transform = Transform2D(1.755, 0, 0, 1.755, -40.265, 0)
+transform = Transform2D(1.755, 0, 0, 1.755, 0, 0)
+follow_viewport_enabled = true
 
 [node name="PlayButton" type="Button" parent="CanvasLayer"]
-offset_left = 611.0
-offset_top = 417.0
-offset_right = 981.0
-offset_bottom = 603.0
+anchors_preset = -1
+anchor_left = 0.318229
+anchor_top = 0.386111
+anchor_right = 0.510938
+anchor_bottom = 0.558333
+offset_left = 0.000366211
+offset_top = 203.0
+offset_right = 0.292053
+offset_bottom = 204.111
 action_mode = 0
 icon = ExtResource("10_ktgd5")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_hfo5s")
@@ -424,5 +430,8 @@ stream = ExtResource("11_hfo5s")
 stream = ExtResource("10_cih8f")
 volume_db = -13.514
 parameters/looping = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579.532, 326.59)
 
 [connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]

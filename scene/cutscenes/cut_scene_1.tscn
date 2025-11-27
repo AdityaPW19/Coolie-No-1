@@ -152,7 +152,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(1.46355, 2.06667),
 "transitions": PackedFloat32Array(0.757858, 1),
 "update": 0,
-"values": [Vector2(2595.22, 356.098), Vector2(-1173.78, 356.098)]
+"values": [Vector2(2811.01, 356.098), Vector2(-1173.78, 356.098)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -745,7 +745,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0.233333, 0.766666),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(1600, 540.248), Vector2(590.024, 540.248)]
+"values": [Vector2(1816.56, 540.248), Vector2(590.024, 540.248)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -987,10 +987,10 @@ tracks/15/path = NodePath("NextButton:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(5.83333, 6.1, 6.6),
-"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"times": PackedFloat32Array(6.1, 6.6),
+"transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(1177.44, 495.122), Vector2(1177.44, 495.122), Vector2(968.439, 495.122)]
+"values": [Vector2(1500, 495.122), Vector2(968.439, 495.122)]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
@@ -1002,7 +1002,7 @@ tracks/16/keys = {
 "times": PackedFloat32Array(5.8),
 "transitions": PackedFloat32Array(0.5),
 "update": 0,
-"values": [Vector2(1600, 540.248)]
+"values": [Vector2(1887.02, 540.248)]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
@@ -1026,7 +1026,7 @@ tracks/18/keys = {
 "times": PackedFloat32Array(2.85895, 3.36667),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(-203.049, 495.122), Vector2(1.82927, 495.122)]
+"values": [Vector2(-600, 495.122), Vector2(1.82927, 495.122)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jtdks"]
@@ -1100,11 +1100,11 @@ visible_ratio = 0.0
 [node name="FadeOverlay" type="ColorRect" parent="."]
 visible = false
 z_index = 5
-offset_left = -28.0
-offset_top = -17.0
-offset_right = 12.0
-offset_bottom = 23.0
-scale = Vector2(30.5667, 17.2182)
+offset_left = -521.341
+offset_top = -298.171
+offset_right = -481.341
+offset_bottom = -258.171
+scale = Vector2(58.5845, 33.0006)
 color = Color(0, 0, 0, 1)
 
 [node name="Shot2" type="Node2D" parent="."]
@@ -1120,6 +1120,8 @@ texture = ExtResource("7_7r7dm")
 position = Vector2(560.366, 385.366)
 scale = Vector2(1.07808, 1.07808)
 texture = ExtResource("8_j7b2c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="NextButton" type="Button" parent="."]
 z_index = 2
@@ -1211,7 +1213,7 @@ z_index = 1
 offset_left = 434.756
 offset_top = 467.683
 offset_right = 1458.76
-offset_bottom = 974.683
+offset_bottom = 974.68
 scale = Vector2(0.377955, 0.377955)
 texture_normal = ExtResource("14_lrvns")
 
@@ -1235,9 +1237,9 @@ texture = ExtResource("9_wi0hu")
 
 [node name="Dialogue" type="Label" parent="DialogueBox"]
 offset_left = -655.639
-offset_top = -77.6724
+offset_top = -121.851
 offset_right = -178.639
-offset_bottom = -17.6724
+offset_bottom = -31.8509
 scale = Vector2(2.7407, 2.7407)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_ailwk")
@@ -1247,6 +1249,9 @@ But passengers are already piling up!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(585.976, 329.268)
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="SkipButton" to="." method="_on_next_button_pressed"]

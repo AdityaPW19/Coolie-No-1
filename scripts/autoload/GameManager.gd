@@ -601,6 +601,11 @@ func complete_level():
 	if game_ui_instance:
 		game_ui_instance.hide()
 		
+	if event_display_instance:
+		event_display_instance.hide()
+		
+	if mobile_controls_instance:
+		mobile_controls_instance.hide()
 	
 	# PAUSE THE GAME - Don't auto-transition!
 	#get_tree().paused = true
@@ -649,6 +654,9 @@ func resume_game():
 		
 		if mobile_controls_instance:
 			mobile_controls_instance.show()
+			
+		if event_display_instance:
+			event_display_instance.show()
 			
 		emit_signal("game_resumed")
 		

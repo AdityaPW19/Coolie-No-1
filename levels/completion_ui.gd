@@ -15,6 +15,9 @@ extends Control
 @onready var next_level_button: TextureButton = $CompletionContainer/ButtonsContainer/Next
 @onready var exit_button: TextureButton = $CompletionContainer/ButtonsContainer/Exit
 @onready var gameUI: Control = $"../GameUI"
+@onready var mobileControls: Control = $"../MobileControls"
+@onready var EventsDisplay: Control = $"../EventDisplayUI"
+
 
 # Coolie expressions
 @onready var coolieExpressionsContainer: Control = $CompletionContainer/CoolieExpressions
@@ -354,6 +357,12 @@ func _on_next_level_pressed():
 	# Make sure GameUI is visible
 	if gameUI:
 		gameUI.visible = true
+		
+	if mobileControls:
+		mobileControls.visible = true
+		
+	if EventsDisplay:
+		EventsDisplay.visible = true
 	
 	# Reset HowToPlay tracking so it shows for the new level
 	var how_to_play = get_node_or_null("/root/Level1/UI/HowToPlay")

@@ -4,7 +4,7 @@ extends Control
 # Node references
 @onready var message_text: Label = $MessageText
 @onready var feedback_text: Label = $FeedBackText
-@onready var hint_button: Button = $HintSystem/HintButton
+@onready var hint_button: Button = $HintButton
 @onready var event_manager: Node = $"../../EventManager"
 
 # Animation tweens
